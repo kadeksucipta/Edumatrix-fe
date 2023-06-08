@@ -1,0 +1,260 @@
+.custom-nav {
+    /* height: 120px; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.nav-all {
+    display: flex;
+    justify-content: end;
+}
+.daftar {
+    margin-left: 50px;
+}
+.img-isi {
+    margin-top: 30px;
+}
+.title-image {
+    margin-top: 20px;
+}
+.desk-1 {
+    text-align: center;
+    font-style: italic;
+    margin-top: 30px;
+}
+.desk-2 {
+    margin-top: 30px;
+}
+.content {
+    display: flex;
+}
+.img-teks {
+    width: 100%;
+}
+.card-review {
+    /* margin-left: 200px; */
+}
+.main-card {
+    width: 18rem;
+    margin-top: 30px;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.ratio-yt {
+    width: 100%;
+    height: 500px;
+}
+.list-edu {
+    margin-top: 50px;
+}
+.box {
+    border-radius: 20px;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    background-color: rgb(242, 157, 0);
+    color: white;
+    text-align: center;
+    padding: 80px;
+}
+.call {
+    width: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 20px;
+    border-radius: 10px;
+    background: rgb(1, 120, 232);
+    border: 1px solid transparent;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+.call:hover {
+    background: none;
+    border: 1px solid white;
+    transition: all 0.6s;
+}
+.wa {
+    width: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    background: rgb(0, 162, 59);
+    border: 1px solid transparent;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+.wa:hover {
+    background: none;
+    border: 1px solid white;
+    transition: all 0.6s;
+}
+.btn-call {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+.desk-box {
+    margin-top: 20px;
+}
+.btn-formdaftar {
+    width: 400px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-color: rgb(63, 63, 63);
+    color: white;
+    margin-top: 20px;
+    font-weight: 700;
+}
+.btn-formdaftar:hover {
+    background: none;
+    border: 2px solid white;
+    transition: all 0.6s;
+}
+.mata-pelajaran, .area, .kursus {
+    margin-top: 60px;
+}
+.title-mapel, .title-area, .desk-mapel, .desk-area {
+    text-align: center;
+}
+li {
+    text-decoration: none;
+}
+.column-mapel, .column-area {
+    column-count: 2;
+}
+li {
+    list-style: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+li:hover {
+    color: red;
+}
+.btn-melayani {
+    width: 100%;
+    background-color: rgb(242, 157, 0);
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.area-card {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+.mengajar {
+    margin-top: 20px;
+}
+.box-2 {
+    margin-top: 60px;
+    background-color: rgb(255, 203, 203);
+    padding: 20px;
+}
+.title-box2 {
+    color: rgb(201, 0, 0);
+}
+.box-5 {
+    text-align: center;
+    margin-top: 50px;
+}
+.box-6 {
+    column-count: 2;
+    text-align: center;
+}
+.btn-les1 {
+    background: rgb(201, 0, 0);
+    color: white;
+    border: 1px solid transparent;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 72%;
+    border-radius: 8px;
+}
+.btn-les2 {
+    background: rgb(201, 0, 0);
+    color: white;
+    border: 1px solid transparent;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    width: 72%;
+}
+.btn-les3 {
+    background: rgb(201, 0, 0);
+    color: white;
+    border: 1px solid transparent;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 72%;
+    border-radius: 8px;
+}
+.btn-les4 {
+    background: rgb(201, 0, 0);
+    color: white;
+    border: 1px solid transparent;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 72%;
+    border-radius: 8px;
+}
+.btn-les5 {
+    background: rgb(201, 0, 0);
+    color: white;
+    border: 1px solid transparent;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    width: 72%;
+}
+.btn-les6 {
+    background: rgb(201, 0, 0);
+    color: white;
+    border: 1px solid transparent;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 72%;
+    border-radius: 8px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    .card-review {
+        display: none;
+    }
+    .img-teks {
+        width: 100%
+    }
+    .area-card {
+        width: 0;
+    }
+    .btn-call {
+        display: flex;
+        justify-content: center;
+    }
+    .btn-les2, .btn-les5 {
+        width: 72%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .box {
+        padding: 20px;
+    }
+    .btn-formdaftar {
+        width: 100%;
+    }
+    .box-6 {
+        display: grid;
+        place-items: center;
+    }
+}
