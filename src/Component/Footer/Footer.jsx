@@ -7,14 +7,14 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
     <div>
       <footer className="footer-distributed">
         <div className="footer-left">
-          <img src="https://bimbelsnbt.com/wp-content/uploads/2022/12/logo-header.png" />
+          <img className="logo-footer" src="https://bimbelsnbt.com/wp-content/uploads/2022/12/logo-header.png" />
           <h3>
             <br />
             Tentang<span>Kami</span>
@@ -32,7 +32,7 @@ const Footer = () => {
 
         <div className="footer-center">
           <div>
-            <i className="fa fa-map-marker"></i>
+            {/* <i><FontAwesomeIcon style={{ color: "white" }} icon={faLocationDot} /></i> */}
             <p>
               <span>Bale Wangsa Residence Kav. 70,</span>
               Sendangadi, Mlati, Sleman, Daerah Istimewa Yogyakarta

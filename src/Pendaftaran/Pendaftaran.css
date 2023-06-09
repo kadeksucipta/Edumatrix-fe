@@ -1,0 +1,181 @@
+.box-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    background: radial-gradient(circle at top right, rgba(1, 120, 232, 0.446), rgba(255, 166, 0, 0.532)),  url(https://bimbelsnbt.com/wp-content/uploads/2023/03/1-1.jpg);
+    color: orange;
+}
+.raih-ptn {
+    color: white;
+}
+.content-daftar {
+    /* display: flex;
+    align-items: center; */
+    column-count: 2;
+    margin-top: 30px;
+}
+.form-daftar {
+    margin-top: 30px;
+}
+.slider-parent {
+    position: relative;
+    cursor: pointer;
+}
+.buble {
+    position: absolute;
+}
+.range-input {
+    width:100%
+}
+.btn-daftar {
+    width: 100%;
+    background: none;
+    border: 2px solid rgb(1, 120, 232);
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px;
+    color: rgb(1, 120, 232);
+    font-weight: 900;
+}
+.box-keunggulan {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    width: 100%;
+    height: auto;
+    background-color: rgb(229, 242, 255);
+    margin-top: 50px;
+}
+.card-keunggulan {
+    width: 40rem;
+    margin-left: 20px;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.box-edu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.logo-edu {
+    width: 500px;
+}
+.text-testi {
+    text-align: center;
+}
+.testimoni {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    flex-wrap: wrap;
+}
+.btn-testi {
+    background: orange;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 8px 28px 8px 28px;
+    font-weight: 500;
+}
+.card-testi {
+    width: 40rem;
+    margin-left: 20px;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.info-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background: rgb(1, 120, 232);
+    color: white;
+    padding: 40px;
+    margin-top: 100px;
+}
+.phone-daftar {
+    font-size: 30px;
+    margin-left: 70px;
+    margin-right: 10px;
+}
+.lokasi-daftar {
+    font-size: 30px;
+    margin-left: 70px;
+    margin-right: 10px;
+}
+.mulai-belajar {
+    font-size: 20px;
+    margin-left: 70px;
+    width: 300px;
+    text-align: right;
+}
+.daftar-sekarang {
+    background: orange;
+    color: white;
+    border: 2px solid transparent;
+    margin-left: 70px;
+    padding: 20px;
+    font-weight: 700;
+    border-radius: 8px;
+}
+.daftar-sekarang:hover {
+    background: none;
+    border: 2px solid white;
+    color: white;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    .content-daftar {
+        display: grid;
+    }
+    .logo-edu {
+        width: 100%;
+    }
+    .info-contact {
+        display: grid;
+        justify-content: center;
+    }
+    .mulai-belajar {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    .daftar-sekarang {
+        margin-left: 0;
+    }
+    .phone-daftar {
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: center;
+    }
+    .lokasi-daftar {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .card-keunggulan {
+        width: 100%;
+        margin-left: 0;
+    }
+    .card-testi{
+        width: 100%;
+    }
+    .testimoni {
+        padding: 10px;
+    }
+    .card-testi {
+        margin-left: 0;
+    }
+    .mulai-belajar {
+        width: 100%;
+        text-align: center;
+    }
+}

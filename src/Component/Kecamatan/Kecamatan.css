@@ -1,0 +1,77 @@
+/* body {
+    background: white;
+}
+.container {
+    width: 400px;
+    margin: 100px auto;
+    position: relative;
+}
+.dropdown, .dropdown-btn {
+    padding: 15px 20px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dropdown, .dropdown-content {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    padding: 15px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    font-weight: 500;
+    color: black;
+    width: 95%;
+}
+.dropdown, .dropdown-content, .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+} */
+
+.kecamatan-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(1, 120, 232);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+.kecamatan-content {
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 10px;
+  column-count: 2;
+  border-radius: 0 0 10px 10px;
+}
+.kecamatan-item {
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 5px;
+}
+.kecamatan-item:hover {
+  text-decoration: underline;
+}
+.icon-kecamatan {
+    margin-right: 8px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    .kecamatan-item {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .kecamatan-content {
+        column-count: 1;
+    }
+}

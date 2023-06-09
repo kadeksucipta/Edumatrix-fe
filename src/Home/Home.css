@@ -66,6 +66,7 @@
     color: white;
     font-weight: 500;
     font-size: 20px;
+    text-decoration: none;
 }
 .call:hover {
     background: none;
@@ -82,6 +83,7 @@
     color: white;
     font-weight: 500;
     font-size: 20px;
+    text-decoration: none;
 }
 .wa:hover {
     background: none;
@@ -130,7 +132,7 @@ li {
     cursor: pointer;
 }
 li:hover {
-    color: red;
+    color: rgb(1, 120, 232);
 }
 .btn-melayani {
     width: 100%;
@@ -165,6 +167,7 @@ li:hover {
 .box-6 {
     column-count: 2;
     text-align: center;
+    margin-bottom: 50px;
 }
 .btn-les1 {
     background: rgb(201, 0, 0);
