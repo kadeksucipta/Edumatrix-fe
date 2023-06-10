@@ -5,14 +5,24 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Header.css"
 import { Button } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const goToHome = () => {
+    navigate("/Home");
+  };
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   return (
     <React.Fragment>
       <Navbar className="custom-nav" bg="none" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand onClick={() => goToHome()}>
             <img
+              style={{cursor: 'pointer'}}
               src="https://bimbelsnbt.com/wp-content/uploads/2022/12/logo-header.png"
               width="120"
               className="d-inline-block align-top"
@@ -74,7 +84,7 @@ const Header = () => {
               style={{ background: "orange", border: "1px solid transparent" }}
               className="daftar"
             >
-              Pendaftaran
+              <strong>Pendaftaran</strong>
             </Button>
           </Navbar.Collapse>
         </Container>

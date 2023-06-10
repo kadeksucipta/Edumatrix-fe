@@ -37,6 +37,12 @@
     margin-top: 30px;
     border: 1px solid transparent;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.main-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 5px 5px 5px;
+    transition: all 0.5s;
 }
 .ratio-yt {
     width: 100%;
@@ -229,11 +235,25 @@ li:hover {
     width: 72%;
     border-radius: 8px;
 }
+.beri-ulasan {
+    width: 100%;
+    background: rgb(1, 120, 232);
+    color: white;
+    border: 1px solid transparent;
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
 
 /* RESPONSIVE */
 @media only screen and (max-width: 768px) {
-    .card-review {
-        display: none;
+    .area-card {
+        display: flex;
+    }
+    .main-card {
+        margin-left: 50%;
+        width: 40rem;
     }
     .img-teks {
         width: 100%
@@ -248,6 +268,18 @@ li:hover {
     .btn-les2, .btn-les5 {
         width: 72%;
     }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        column-count: 1;
+        margin-left: 0;
+    }
+    .beri-ulasan {
+        margin-left: 50%;
+        margin-bottom: 80px;
+    }
 }
 @media only screen and (max-width: 550px) {
     .box {
@@ -259,5 +291,8 @@ li:hover {
     .box-6 {
         display: grid;
         place-items: center;
+    }
+    .main-card {
+        width: 20rem;
     }
 }

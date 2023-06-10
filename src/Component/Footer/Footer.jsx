@@ -14,7 +14,7 @@ const Footer = () => {
     <div>
       <footer className="footer-distributed">
         <div className="footer-left">
-          <img className="logo-footer" src="https://bimbelsnbt.com/wp-content/uploads/2022/12/logo-header.png" />
+          <img style={{width: "200px"}} className="logo-footer" src="https://bimbelsnbt.com/wp-content/uploads/2022/12/logo-header.png" />
           <h3>
             <br />
             Tentang<span>Kami</span>
@@ -41,7 +41,7 @@ const Footer = () => {
           <br />
           <div>
             <FontAwesomeIcon style={{ color: "white" }} icon={faPhone} />{" "}
-            <p>+62 85-600422188</p>
+            <p>+62 81-215523902</p>
           </div>
           <div>
             <FontAwesomeIcon style={{ color: "white" }} icon={faEnvelope} />{" "}

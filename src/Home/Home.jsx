@@ -25,24 +25,38 @@ import Kecamatan from "../Component/Kecamatan/Kecamatan";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import AnimatedPage from "../Component/Animate/Animate";
+import { setUserData } from "../App/features/Login/Actions";
 
 const Home = () => {
   const goToPendaftaran = () => {
     navigate("/Pendaftaran");
   };
+  const goToUlasan = () => {
+    navigate("/Ulasan");
+  };
+
+  const [user, setUser] = useState({
+    username: "",
+    pesan: "",
+    rating: ""
+  });
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [review, setReveiew] = useState([]);
   const [data, setData] = useState([]);
 
+  // STATE ULASAN
+  const [ulasan, setUlasan] = useState([]);
+
   useEffect(() => {
     fetchReview();
     fetchData();
+    fetchGetUlasan();
   }, []);
 
   const fetchReview = () => {
-    fetch(`https://edumatrix-fe-production.up.railway.app/api/products`)
+    fetch(`https://odd-puce-panther-tie.cyclic.app/api/products`)
       .then((res) => res.json())
       .then((data) => {
         setReveiew(data.data);
@@ -51,7 +65,7 @@ const Home = () => {
   };
 
   const fetchData = () => {
-    fetch(`https://edumatrix-fe-production.up.railway.app/api/tags`)
+    fetch(`https://odd-puce-panther-tie.cyclic.app/api/tags`)
       .then((res) => res.json())
       .then((data) => {
         setData(data.data);
@@ -59,14 +73,32 @@ const Home = () => {
       });
   };
 
-  const errorHandler = () => [
-    swal({
-      title: "Fitur sedang dibangun",
-      icon: "warning",
-      buttons: true,
-      dangerMode: true,
-    }),
-  ];
+  // PANGGIL DATA ULASAN
+  const fetchGetUlasan = () => {
+    // const payload = {...user}
+    // payload.languages = payload.languages.join (",")
+    console.log(user);
+    fetch(`https://odd-puce-panther-tie.cyclic.app/api/dataulasan`, {
+      method: "GET",
+      // body: JSON.stringify(payload),
+      headers: { "Content-Type": "application/json;charset=utf-8" },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        dispatch(setUserData({ user: data?.user, token: data?.token }));
+
+        createItem(data);
+        setUlasan(data);
+        console.log(data);
+      });
+  };
+
+  const createItem = (data) => {
+    localStorage.setItem("userData", JSON.stringify(data?.user));
+    localStorage.setItem("token", data?.token);
+  };
 
   return (
     <React.Fragment>
@@ -139,7 +171,7 @@ const Home = () => {
                 }}
                 className="daftar"
               >
-                Pendaftaran
+                <strong>Pendaftaran</strong>
               </Button>
             </Navbar.Collapse>
           </Container>
@@ -164,7 +196,7 @@ const Home = () => {
                 Merasa sulit untuk mendapatkan PTN impian? Tes berkali - kali
                 tetapi tidak ada hasil? seiring semangat belajar yang semakin
                 berkurang? Mempercayakan Edumatrix Indonesia sebagai tempat
-                belajar adalah pilihan teap dan akurat!
+                belajar adalah pilihan tepat dan akurat!
               </p>
               <p className="desk-2">
                 Hal ini dikarenakan EDUMATRIX INDONESIA hanya memilih tenaga
@@ -619,22 +651,18 @@ const Home = () => {
               <div className="box-4">
                 <h1>Biaya Les Private Edumatrix Indonesia</h1>
                 <p>
-                  Penawaran biaya les privat Executive Education ditentukan
-                  berdasarkan kualifikasi guru, jenjang pendidikan, bahasa
-                  pengantar, penerapan kurikulum dan jarak atau kemudahan akses
-                  ke lokasi siswa. Secara umum, biaya les privat per pertemuan
-                  di Kembangan memang tinggi dibandingkan dengan les privat.
+                  Biaya Program Supercamp EDUMATRIX 2023 terdiri dari :
+                  <br />
+                  1. Biaya Program Belajar.
+                  <br />
+                  2. Biaya Booking Seat untuk memastikan Ananda terdaftar dalam
+                  Program Supercamp EDUMATRIX 2023.
                   <br />
                   <br />
-                  Walau demikian, perubahan pemahaman materi dan pencapaian
-                  belajar siswa akan sebanding dengan biaya les privat yang
-                  sudah dikeluarkan oleh orang tua. Tertarik untuk ketahui lebih
-                  detail terkait harga les privat di Kembangan dari Executive
-                  Education? Silahkan hubungi pihak customer service kami
-                  melalui icon WhatsApp yang terpasang pada situs ini. Dapatkan
-                  PROMO SPESIAL pendaftaran les privat SD, SMP & SMA di
-                  Kembangan dari Executive Education pada hari-hari besar
-                  tertentu di Indonesia.
+                  Biaya Booking Seat dibayarkan pada awal saat siswa mendaftar
+                  sebagai siswa Program Supercamp EDUMATRIX dan dikalkulasikan
+                  sebagai pengurang biaya program belajar. BIAYA ditentukan
+                  sesuai dengan Program yang akan diikuti.
                 </p>
               </div>
 
@@ -670,7 +698,7 @@ const Home = () => {
 
             {/* AREA IKLAN/REVIEW */}
             <div className="area-card">
-              <div className="card-review">
+              <div className="card-review1">
                 <div className="card-review">
                   <Card style={{ border: "none" }} className="main-card">
                     <Card.Img
@@ -694,25 +722,25 @@ const Home = () => {
                     </Card.Body>
                   </Card>
                 </div>
-                {review?.map((item, index) => (
-                  <Card
-                    key={index}
-                    style={{ border: "none" }}
-                    className="main-card"
-                  >
+
+                {ulasan.data?.map((item, index) => (
+                  <Card key={index} style={{ border: "none" }} className="main-card">
                     <Card.Body>
-                      <Card.Title>{item.name}</Card.Title>
-                      <Card.Text>{item.description}</Card.Text>
+                      <Card.Title><strong>{item.username}</strong></Card.Title>
+                      <Card.Text>{item.pesan}</Card.Text>
                       <Card.Text>
                         <FontAwesomeIcon
                           style={{ color: "gold" }}
                           icon={faStar}
                         />{" "}
-                        95/100
+                        {item.rating}
                       </Card.Text>
                     </Card.Body>
                   </Card>
                 ))}
+                <button onClick={() => goToUlasan()} className="beri-ulasan">
+                  Berikan Ulasan
+                </button>
               </div>
             </div>
           </div>

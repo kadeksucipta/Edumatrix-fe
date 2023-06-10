@@ -55,6 +55,13 @@
     margin-left: 20px;
     margin-top: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.card-keunggulan:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 5px 5px 5px;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 .box-edu {
     display: flex;
@@ -86,6 +93,13 @@
     margin-left: 20px;
     margin-top: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.card-testi:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 5px 5px 5px;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 .info-contact {
     display: flex;

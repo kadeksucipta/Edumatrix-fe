@@ -9,6 +9,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import store from "./App/store"
 import Home from './Home/Home';
 import Pendaftaran from './Pendaftaran/Pendaftaran';
+import Ulasan from './Ulasan/Ulasan';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "Pendaftaran",
     element: <Pendaftaran/>
+  },
+  {
+    path: "Ulasan",
+    element: <Ulasan/>
   },
 ])
 
