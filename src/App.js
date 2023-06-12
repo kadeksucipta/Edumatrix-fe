@@ -5,7 +5,7 @@ import Pendaftaran from './Pendaftaran/Pendaftaran';
 
 function App() {
   return (
-    <Home />
+    <Landing />
   );
 }
 

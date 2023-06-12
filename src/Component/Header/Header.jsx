@@ -12,6 +12,18 @@ const Header = () => {
   const goToHome = () => {
     navigate("/Home");
   };
+  const goToPendaftaran = () => {
+    navigate("/Pendaftaran")
+  }
+  const goToProfileTutor = () => {
+    navigate("/ProfileTutor")
+  }
+  const goToContactKami = () => {
+    navigate("/ContactKami")
+  }
+  const goToTentangKami = () => {
+    navigate("/TentangKami")
+  }
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -33,54 +45,57 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse className="nav-all" id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <NavDropdown title="Tentang Kami" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.2">
+              <NavDropdown title="Profile" id="basic-nav-dropdown">
+                <NavDropdown.Item onClick={() => goToProfileTutor()} >
                   Pofile Tutor
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item onClick={() => goToContactKami()}>
                   Kontak Kami
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={() => goToTentangKami()}>
+                  Tentang Kami
                 </NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown title="Bimbingan Belajar" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item >
                   Les Privat Offline
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item >
                   Les Privat Online
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
+                <NavDropdown.Item >
                   Les Privat Calistung
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">
+                <NavDropdown.Item >
                   Les Privat Olimpiade
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">
+                <NavDropdown.Item >
                   Les Privat SBMPTN
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">
+                <NavDropdown.Item >
                   Les Privat CPNS
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Kursus" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item >
                   Kursus Bahasa Asing
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item >
                   Kursus Kesenian
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
+                <NavDropdown.Item >
                   Kursus Olahraga
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">
+                <NavDropdown.Item >
                   Kursus Komputer
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <Button
-            //   onClick={() => errorHandler()}
+              onClick={() => goToPendaftaran()}
               style={{ background: "orange", border: "1px solid transparent" }}
               className="daftar"
             >

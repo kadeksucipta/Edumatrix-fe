@@ -16,10 +16,8 @@ import {
   faPhone,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import Carausel from "../Component/Carousel/Carausel";
 import Footer from "../Component/Footer/Footer";
-import swal from "sweetalert";
 import Dropdown from "../Component/Dropdown/Dropdown";
 import Kecamatan from "../Component/Kecamatan/Kecamatan";
 import { useDispatch } from "react-redux";
@@ -34,11 +32,20 @@ const Home = () => {
   const goToUlasan = () => {
     navigate("/Ulasan");
   };
+  const goToProfileTutor = () => {
+    navigate("/ProfileTutor")
+  }
+  const goToContactKami = () => {
+    navigate("/ContactKami")
+  }
+  const goToTentangKami = () => {
+    navigate("/TentangKami")
+  }
 
   const [user, setUser] = useState({
     username: "",
     pesan: "",
-    rating: ""
+    rating: "",
   });
 
   const dispatch = useDispatch();
@@ -105,7 +112,7 @@ const Home = () => {
       <AnimatedPage>
         <Navbar className="custom-nav" bg="none" expand="lg">
           <Container>
-            <Navbar.Brand href="#home">
+            <Navbar.Brand>
               <img
                 src="https://bimbelsnbt.com/wp-content/uploads/2022/12/logo-header.png"
                 width="120"
@@ -117,50 +124,33 @@ const Home = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse className="nav-all" id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <NavDropdown title="Tentang Kami" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.2">
+                <NavDropdown title="Profile" id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={() => goToProfileTutor()}>
                     Pofile Tutor
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
+                  <NavDropdown.Item onClick={() => goToContactKami()}>
                     Kontak Kami
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToTentangKami()}>
+                    Tentang Kami
                   </NavDropdown.Item>
                 </NavDropdown>
 
                 <NavDropdown title="Bimbingan Belajar" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.2">
-                    Les Privat Offline
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Les Privat Online
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>Les Privat Offline</NavDropdown.Item>
+                  <NavDropdown.Item>Les Privat Online</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Les Privat Calistung
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.4">
-                    Les Privat Olimpiade
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.4">
-                    Les Privat SBMPTN
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.4">
-                    Les Privat CPNS
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>Les Privat Calistung</NavDropdown.Item>
+                  <NavDropdown.Item>Les Privat Olimpiade</NavDropdown.Item>
+                  <NavDropdown.Item>Les Privat SBMPTN</NavDropdown.Item>
+                  <NavDropdown.Item>Les Privat CPNS</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Kursus" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.2">
-                    Kursus Bahasa Asing
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Kursus Kesenian
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>Kursus Bahasa Asing</NavDropdown.Item>
+                  <NavDropdown.Item>Kursus Kesenian</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Kursus Olahraga
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.4">
-                    Kursus Komputer
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>Kursus Olahraga</NavDropdown.Item>
+                  <NavDropdown.Item>Kursus Komputer</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
               <Button
@@ -724,9 +714,15 @@ const Home = () => {
                 </div>
 
                 {ulasan.data?.map((item, index) => (
-                  <Card key={index} style={{ border: "none" }} className="main-card">
+                  <Card
+                    key={index}
+                    style={{ border: "none" }}
+                    className="main-card"
+                  >
                     <Card.Body>
-                      <Card.Title><strong>{item.username}</strong></Card.Title>
+                      <Card.Title>
+                        <strong>{item.username}</strong>
+                      </Card.Title>
                       <Card.Text>{item.pesan}</Card.Text>
                       <Card.Text>
                         <FontAwesomeIcon

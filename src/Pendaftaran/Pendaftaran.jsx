@@ -21,6 +21,19 @@ const Pendaftaran = () => {
   const [keunggulan, setKeunggulan] = useState([]);
   const [testimoni, setTestimoni] = useState([]);
 
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [pendidikan, setPendidikan] = useState("");
+  const [status, setStatus] = useState("");
+  const [mapel, setMapel] = useState("");
+  const [hp, setHp] = useState(0);
+  const [pesan, setPesan] = useState("");
+  const [sesi, setSesi] = useState("");
+  const [preferensi, setPreferensi] = useState("");
+  const [belajar, setBelajar] = useState("");
+
+  const [error, setError] = useState(false);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -116,6 +129,36 @@ const Pendaftaran = () => {
     console.log(user);
     swal("Pendaftaran anda telah direkam", "Tekan tombol OK", "success");
   };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (
+  //     email.length == 0 ||
+  //     username.length == 0 ||
+  //     pendidikan.length == 0 ||
+  //     status.length == 0 ||
+  //     mapel.length == 0 ||
+  //     hp.length == 0 ||
+  //     sesi.length == 0 ||
+  //     preferensi.length == 0 ||
+  //     belajar.length == 0
+  //   ) {
+  //     return setError(true)
+  //   }
+  //   const formData = new URLSearchParams({
+  //     username: username,
+  //     email,
+  //     pendidikan,
+  //     status,
+  //     mapel,
+  //     hp,
+  //     sesi,
+  //     preferensi,
+  //     belajar
+  //   });
+  //   fetchLogin(formData);
+  //   console.log(email, password);
+  // };
 
   const createItem = (data) => {
     localStorage.setItem("userData", JSON.stringify(data?.user));
@@ -350,7 +393,7 @@ const Pendaftaran = () => {
                 <Card.Body className="card-edu">
                   <Card.Title>{item.name}</Card.Title>
                   <button className="btn-testi">{item.sub}</button>
-                  <Card.Text>{item.description}</Card.Text>
+                  <Card.Text className="testi-alumni">{item.description}</Card.Text>
                 </Card.Body>
               </Card>
             ))}

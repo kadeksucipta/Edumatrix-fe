@@ -142,6 +142,9 @@
     border: 2px solid white;
     color: white;
 }
+.testi-alumni {
+    margin-top: 10px;
+}
 
 /* RESPONSIVE */
 @media only screen and (max-width: 768px) {

@@ -10,6 +10,9 @@ import store from "./App/store"
 import Home from './Home/Home';
 import Pendaftaran from './Pendaftaran/Pendaftaran';
 import Ulasan from './Ulasan/Ulasan';
+import ProfileTutor from './ProfileTutor/ProfileTutor';
+import ContactKami from './ContactKami/ContactKami';
+import TentangKami from './TentangKami/TentangKami';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +30,18 @@ const router = createBrowserRouter([
   {
     path: "Ulasan",
     element: <Ulasan/>
+  },
+  {
+    path: "ProfileTutor",
+    element: <ProfileTutor/>
+  },
+  {
+    path: "ContactKami",
+    element: <ContactKami/>
+  },
+  {
+    path: "TentangKami",
+    element: <TentangKami/>
   },
 ])
 

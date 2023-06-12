@@ -1,0 +1,225 @@
+.box-landing {
+  width: 100%;
+  height: 700px;
+  /* background: rgb(1, 120, 232); */
+  background: radial-gradient(circle at top right, rgba(1, 120, 232, 0.446), rgba(255, 166, 0, 0.532)),  url(https://edumatrix-indonesia.com/wp-content/uploads/2022/12/bimbel-masuk-ptn-2023.jpg);
+  column-count: 2;
+  padding: 20px;
+  color: rgb(54, 54, 54);
+}
+.content-landing {
+  margin: 20px;
+  margin-top: 120px;
+}
+.img-landing {
+  width: 100%;
+  border-radius: 50px 5px 50px 5px;
+  margin-top: 120px;
+  border: 10px solid white;
+}
+.btn-landing {
+  margin-top: 70px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  color: white;
+  background: rgb(47, 154, 254);
+  text-decoration: none;
+}
+.desk-landing {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.box-about {
+  width: 100%;
+  height: auto;
+  background: rgba(101, 183, 255, 0.337);
+  column-count: 2;
+  color: black;
+  margin-top: 80px;
+}
+.isi-about {
+  padding: 40px;
+}
+.img-about {
+  width: 100% !important;
+}
+.desk-about {
+  font-size: 20px;
+  margin-top: 30px;
+}
+.btn-about {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  color: white;
+  background: rgb(47, 154, 254);
+}
+.benefit-eduatrix {
+  margin-top: 80px;
+  background: rgba(101, 183, 255, 0.337);
+  padding: 25px;
+}
+.box-benefit {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card-benefit {
+  width: 25rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.card-benefit:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 5px 5px 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.text-benefit1,
+.text-benefit2 {
+  text-align: center;
+}
+.program-unggulan {
+  text-align: center;
+  margin-top: 80px;
+}
+.card-progunggul {
+  width: 20rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.card-progunggul:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 5px 5px 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.btn-chatnow {
+  text-decoration: none;
+  color: white;
+  background: orange;
+  padding: 11px;
+  margin: 40px;
+  border-radius: 5px;
+}
+.promo-edumatrix {
+  text-align: center;
+  margin-top: 80px;
+}
+.img-promo {
+  margin-top: 20px;
+}
+.tertarik-gabung {
+  margin-top: 80px;
+  column-count: 2;
+  background: rgba(101, 183, 255, 0.337);
+}
+.img-tertarik {
+  width: 100%;
+}
+.isi-gabung {
+  padding: 40px;
+}
+.desk-gabung {
+  margin-top: 30px;
+}
+.btn-gabung {
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  color: white;
+  background: rgb(47, 154, 254);
+}
+.univ {
+  text-align: center;
+  margin-top: 30px;
+}
+.box-edu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.text-testi {
+  text-align: center;
+}
+.testimoni-landing {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.btn-testilanding {
+  background: orange;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 8px 28px 8px 28px;
+  font-weight: 500;
+}
+.card-landing {
+  width: 25rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.card-landing:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 5px 5px 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.testi-desk {
+  margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+  .box-landing {
+    display: grid;
+    height: auto;
+  }
+  .box-about {
+    display: grid;
+    width: 100%;
+  }
+  .img-about {
+    width: 100%;
+  }
+  .img-promo {
+    width: 100%;
+  }
+  .univ {
+    width: 100%;
+  }
+  .tertarik-gabung {
+    display: grid;
+  }
+  .card-benefit {
+    width: 20rem;
+  }
+  .card-landing {
+    width: 20rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .img-landing {
+    border: 5px solid white;
+  }
+  .content-landing {
+    margin-top: 30px;
+  }
+}
