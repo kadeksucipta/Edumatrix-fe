@@ -13,6 +13,7 @@ import siswa from "../Component/siswa.jpg";
 import Footer from "../Component/Footer/Footer";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import WaFloat from "../Component/WaFloat/WaFloat";
 
 const Landing = () => {
   const goToPendaftaran = () => {
@@ -315,6 +316,7 @@ const Landing = () => {
         <button onClick={() => goToPendaftaran()} className="daftar-sekarang">Daftar Sekarang</button>
       </div>
 
+      <WaFloat />
       <Footer />
     </React.Fragment>
   );

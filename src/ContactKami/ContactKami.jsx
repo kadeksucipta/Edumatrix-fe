@@ -12,6 +12,7 @@ import {
   faPhoneSquareAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../Component/Footer/Footer";
+import WaFloat from "../Component/WaFloat/WaFloat";
 
 const ContactKami = () => {
   return (
@@ -19,7 +20,7 @@ const ContactKami = () => {
       <Header />
 
       <div className="box-quest">
-        <h1>Kontak Kami</h1>
+        <h1><strong>Kontak Kami</strong></h1>
       </div>
       <Container>
         <div className="box-contact">
@@ -53,7 +54,7 @@ const ContactKami = () => {
           </div>
         </div>
       </Container>
-
+      <WaFloat />
       <Footer />
     </React.Fragment>
   );

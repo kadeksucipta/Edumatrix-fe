@@ -7,6 +7,7 @@ import { setUserData } from "../App/features/Login/Actions";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import WaFloat from "../Component/WaFloat/WaFloat";
 
 const Ulasan = () => {
   const navigate = useNavigate();
@@ -134,6 +135,7 @@ const Ulasan = () => {
           </Form>
         </Container>
       </div>
+      <WaFloat />
       <Footer />
     </React.Fragment>
   );

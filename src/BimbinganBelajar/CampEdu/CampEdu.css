@@ -1,0 +1,247 @@
+.supercamp-edu {
+  display: grid;
+  justify-content: center;
+}
+.box-campedu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background: rgb(1, 120, 232);
+  color: white;
+}
+.text-campedu {
+  text-align: center;
+  margin-top: 30px;
+}
+.desk-campedu {
+  font-size: 18px;
+}
+.icon-campedu {
+  margin-right: 10px;
+}
+.header-priority {
+  background: rgb(1, 120, 232);
+  color: white;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+}
+.btn-priority {
+  background: orangered;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.card-priority {
+  margin-top: 30px;
+  width: 100%;
+}
+.header-platinum {
+  background: rgb(190, 190, 190);
+  color: white;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+}
+.btn-platinum {
+  background: rgb(1, 120, 232);
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+}
+.card-platinum {
+  margin-top: 30px;
+  width: 100%;
+}
+.header-gold {
+  background: gold;
+  color: white;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+}
+.btn-gold {
+  background: orangered;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+}
+.card-gold {
+  margin-top: 30px;
+  width: 100%;
+}
+.card-supercamp {
+  width: 20rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.card-supercamp:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 5px 5px 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.program-supercamp1 {
+  display: flex;
+  justify-content: center;
+}
+.program-supercamp {
+  text-align: center;
+  margin-top: 80px;
+}
+.mulai-daftar {
+  display: flex;
+  justify-content: center;
+  background: rgb(1, 120, 232);
+  margin-top: 80px;
+  padding: 50px;
+  color: white;
+}
+/* .p-supercamp {
+  width: 80%;
+} */
+.btn-mulaidaftar {
+  display: flex;
+  justify-content: end;
+}
+.wa-supercamp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px 0 0 10px;
+  background: rgb(0, 162, 59);
+  border: 1px solid transparent;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.6s;
+}
+.wa-supercamp:hover {
+  background: none;
+  border: 1px solid white;
+  transition: all 0.6s;
+}
+.telp-supercamp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: orange;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 200px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  transition: all 0.6s;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.telp-supercamp:hover {
+  background: none;
+  border: 1px solid white;
+  transition: all 0.6s;
+}
+.form-supercamp {
+  background: orangered;
+  border: 1px solid transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 0 10px 10px 0;
+  transition: all 0.6s;
+}
+.form-supercamp:hover {
+  background: none;
+  border: 1px solid white;
+  transition: all 0.6s;
+}
+.btn-chatnowsupercamp{
+  background: orange;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+  .supercamp-edu {
+    width: 100%;
+  }
+  .mulai-daftar {
+    display: grid;
+    place-items: center;
+  }
+  .program-supercamp1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .card-priority {
+    width: 100% !important;
+  }
+  .card-platinum {
+    width: 100%;
+  }
+  .card-gold {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .btn-mulaidaftar{
+    display: grid;
+    justify-content: center;
+  }
+  .wa-supercamp {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .telp-supercamp {
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+  .form-supercamp {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  .isi-supercamp {
+    width: 100%;
+  }
+  .mulai-daftar {
+    width: 100%;
+  }
+  .supercamp-edu {
+    padding: 20px;
+  }
+  .desk-campedu {
+    padding: 20px;
+  }
+}

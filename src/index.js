@@ -13,6 +13,10 @@ import Ulasan from './Ulasan/Ulasan';
 import ProfileTutor from './ProfileTutor/ProfileTutor';
 import ContactKami from './ContactKami/ContactKami';
 import TentangKami from './TentangKami/TentangKami';
+import CampEdu from './BimbinganBelajar/CampEdu/CampEdu';
+import Cpns from './BimbinganBelajar/Cpns/Cpns';
+import Bumn from './BimbinganBelajar/Bumn/Bumn';
+import SmaUnggul from './BimbinganBelajar/SmaUnggul/SmaUnggul';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +46,22 @@ const router = createBrowserRouter([
   {
     path: "TentangKami",
     element: <TentangKami/>
+  },
+  {
+    path: "CampEdu",
+    element: <CampEdu/>
+  },
+  {
+    path: "Cpns",
+    element: <Cpns/>
+  },
+  {
+    path: "Bumn",
+    element: <Bumn/>
+  },
+  {
+    path: "SmaUnggul",
+    element: <SmaUnggul/>
   },
 ])
 

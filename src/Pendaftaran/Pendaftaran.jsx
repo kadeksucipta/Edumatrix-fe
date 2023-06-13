@@ -16,6 +16,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import { setUserData } from "../../src/App/features/Login/Actions";
+import WaFloat from "../Component/WaFloat/WaFloat";
 
 const Pendaftaran = () => {
   const [keunggulan, setKeunggulan] = useState([]);
@@ -173,7 +174,7 @@ const Pendaftaran = () => {
         {/* ISI */}
         <div className="box-daftar">
           <div className="box-title">
-            <h1>
+            <h1 className="daftar-bimbelsekarang">
               <strong>DAFTAR SEKARANG</strong>
             </h1>
             <h4 className="raih-ptn">RAIH PTN IMPIANMU BERSAMA KAMI</h4>
@@ -417,6 +418,7 @@ const Pendaftaran = () => {
           </h3>
           <button className="daftar-sekarang">Daftar Sekarang</button>
         </div>
+        <WaFloat />
         <Footer />
       </AnimatedPage>
     </React.Fragment>

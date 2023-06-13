@@ -24,6 +24,8 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import AnimatedPage from "../Component/Animate/Animate";
 import { setUserData } from "../App/features/Login/Actions";
+import WaFloat from "../Component/WaFloat/WaFloat";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const Home = () => {
   const goToPendaftaran = () => {
@@ -33,14 +35,26 @@ const Home = () => {
     navigate("/Ulasan");
   };
   const goToProfileTutor = () => {
-    navigate("/ProfileTutor")
-  }
+    navigate("/ProfileTutor");
+  };
   const goToContactKami = () => {
-    navigate("/ContactKami")
-  }
+    navigate("/ContactKami");
+  };
   const goToTentangKami = () => {
-    navigate("/TentangKami")
-  }
+    navigate("/TentangKami");
+  };
+  const goToCampEdu = () => {
+    navigate("/CampEdu");
+  };
+  const goToCpns = () => {
+    navigate("/Cpns");
+  };
+  const goToBumn = () => {
+    navigate("/Bumn");
+  };
+  const goToSmaUnggul = () => {
+    navigate("/SmaUnggul");
+  };
 
   const [user, setUser] = useState({
     username: "",
@@ -137,11 +151,13 @@ const Home = () => {
                 </NavDropdown>
 
                 <NavDropdown title="Bimbingan Belajar" id="basic-nav-dropdown">
-                  <NavDropdown.Item>Les Privat Offline</NavDropdown.Item>
-                  <NavDropdown.Item>Les Privat Online</NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToCampEdu()}>
+                    CAMP EDUMATRIX
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToCpns()}>Bimbel CPNS</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item>Les Privat Calistung</NavDropdown.Item>
-                  <NavDropdown.Item>Les Privat Olimpiade</NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToBumn()}>Bimbel BUMN</NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToSmaUnggul()}>Bimbel SMA Unggulan</NavDropdown.Item>
                   <NavDropdown.Item>Les Privat SBMPTN</NavDropdown.Item>
                   <NavDropdown.Item>Les Privat CPNS</NavDropdown.Item>
                 </NavDropdown>
@@ -282,10 +298,10 @@ const Home = () => {
                     href="https://api.whatsapp.com/send?phone=+6281215523902&text=Halo%20Kak%2C%20Saya%20mau%20tanya%20mengenai%20bimbel%20diEdumatrix%20Terima%20kasih."
                     className="wa"
                   >
-                    WhatsApp
+                    <FontAwesomeIcon icon={faWhatsapp} /> <strong>WhatsApp</strong>
                   </a>
                   <a href="tel:+6281215523902" className="call">
-                    <FontAwesomeIcon icon={faPhone} /> Call
+                    <FontAwesomeIcon icon={faPhone} /> <strong>Call</strong>
                   </a>
                 </div>
                 <p className="btn-call">
@@ -741,6 +757,7 @@ const Home = () => {
             </div>
           </div>
         </Container>
+        <WaFloat />
         <Footer />
       </AnimatedPage>
     </React.Fragment>

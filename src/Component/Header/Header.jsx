@@ -1,29 +1,41 @@
-import React from 'react';
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import "./Header.css"
-import { Button } from 'react-bootstrap';
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import "./Header.css";
+import { Button } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const goToHome = () => {
     navigate("/Home");
   };
   const goToPendaftaran = () => {
-    navigate("/Pendaftaran")
-  }
+    navigate("/Pendaftaran");
+  };
   const goToProfileTutor = () => {
-    navigate("/ProfileTutor")
-  }
+    navigate("/ProfileTutor");
+  };
   const goToContactKami = () => {
-    navigate("/ContactKami")
-  }
+    navigate("/ContactKami");
+  };
   const goToTentangKami = () => {
-    navigate("/TentangKami")
-  }
+    navigate("/TentangKami");
+  };
+  const goToCampEdu = () => {
+    navigate("/CampEdu");
+  };
+  const goToCpns = () => {
+    navigate("/Cpns");
+  };
+  const goToBumn = () => {
+    navigate("/Bumn");
+  };
+  const goToSmaUnggul = () => {
+    navigate("/SmaUnggul");
+  };
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -34,7 +46,7 @@ const Header = () => {
         <Container>
           <Navbar.Brand onClick={() => goToHome()}>
             <img
-              style={{cursor: 'pointer'}}
+              style={{ cursor: "pointer" }}
               src="https://bimbelsnbt.com/wp-content/uploads/2022/12/logo-header.png"
               width="120"
               className="d-inline-block align-top"
@@ -46,7 +58,7 @@ const Header = () => {
           <Navbar.Collapse className="nav-all" id="basic-navbar-nav">
             <Nav className="mr-auto">
               <NavDropdown title="Profile" id="basic-nav-dropdown">
-                <NavDropdown.Item onClick={() => goToProfileTutor()} >
+                <NavDropdown.Item onClick={() => goToProfileTutor()}>
                   Pofile Tutor
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={() => goToContactKami()}>
@@ -58,40 +70,24 @@ const Header = () => {
               </NavDropdown>
 
               <NavDropdown title="Bimbingan Belajar" id="basic-nav-dropdown">
-                <NavDropdown.Item >
-                  Les Privat Offline
+                <NavDropdown.Item onClick={() => goToCampEdu()}>
+                  CAMP EDUMATRIX
                 </NavDropdown.Item>
-                <NavDropdown.Item >
-                  Les Privat Online
+                <NavDropdown.Item onClick={() => goToCpns()}>
+                  Bimbel CPNS
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item >
-                  Les Privat Calistung
-                </NavDropdown.Item>
-                <NavDropdown.Item >
-                  Les Privat Olimpiade
-                </NavDropdown.Item>
-                <NavDropdown.Item >
-                  Les Privat SBMPTN
-                </NavDropdown.Item>
-                <NavDropdown.Item >
-                  Les Privat CPNS
-                </NavDropdown.Item>
+                <NavDropdown.Item onClick={() => goToBumn()}>Bimbel BUMN</NavDropdown.Item>
+                <NavDropdown.Item onClick={() => goToSmaUnggul()}>Bimbel SMA Unggulan</NavDropdown.Item>
+                <NavDropdown.Item>Les Privat SBMPTN</NavDropdown.Item>
+                <NavDropdown.Item>Les Privat CPNS</NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Kursus" id="basic-nav-dropdown">
-                <NavDropdown.Item >
-                  Kursus Bahasa Asing
-                </NavDropdown.Item>
-                <NavDropdown.Item >
-                  Kursus Kesenian
-                </NavDropdown.Item>
+                <NavDropdown.Item>Kursus Bahasa Asing</NavDropdown.Item>
+                <NavDropdown.Item>Kursus Kesenian</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item >
-                  Kursus Olahraga
-                </NavDropdown.Item>
-                <NavDropdown.Item >
-                  Kursus Komputer
-                </NavDropdown.Item>
+                <NavDropdown.Item>Kursus Olahraga</NavDropdown.Item>
+                <NavDropdown.Item>Kursus Komputer</NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <Button
@@ -106,6 +102,6 @@ const Header = () => {
       </Navbar>
     </React.Fragment>
   );
-}
+};
 
 export default Header;

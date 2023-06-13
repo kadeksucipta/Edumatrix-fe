@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Navigate, useNavigate } from "react-router-dom";
 import Footer from "../Component/Footer/Footer";
 import { useDispatch } from "react-redux";
+import WaFloat from "../Component/WaFloat/WaFloat";
 
 const TentangKami = () => {
   const goToPendaftaran = () => {
@@ -148,7 +149,7 @@ const TentangKami = () => {
           Daftar Sekarang
         </button>
       </div>
-
+      <WaFloat />
       <Footer />
     </React.Fragment>
   );

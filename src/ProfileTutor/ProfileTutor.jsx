@@ -11,6 +11,7 @@ import {
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Component/Footer/Footer";
+import WaFloat from "../Component/WaFloat/WaFloat";
 
 const ProfileTutor = () => {
   const goToPendaftaran = () => {
@@ -136,7 +137,7 @@ const ProfileTutor = () => {
           Daftar Sekarang
         </button>
       </div>
-
+      <WaFloat />
       <Footer />
     </React.Fragment>
   );
