@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../Component/Footer/Footer";
 import WaFloat from "../../Component/WaFloat/WaFloat";
+import AnimatedPage from "../../Component/Animate/Animate";
 
 const CampEdu = () => {
   const goToPendaftaran = () => {
@@ -19,15 +20,15 @@ const CampEdu = () => {
   const navigate = useNavigate();
   return (
     <React.Fragment>
-      <Header />
+      <AnimatedPage>
+        <Header />
 
-      <div className="box-campedu">
-        <h1>
-          <strong>SuperCamp Edumatrix 2023</strong>
-        </h1>
-      </div>
+        <div className="box-campedu">
+          <h1>
+            <strong>SuperCamp Edumatrix 2023</strong>
+          </h1>
+        </div>
 
- 
         <div className="text-campedu">
           <h5 className="desk-campedu">
             Supercamp Edumatrix 2023 merupakan program belajar dengan sistem
@@ -449,34 +450,39 @@ const CampEdu = () => {
           </div>
         </div>
 
-      <div className="mulai-daftar">
-        <div className="isi-supercamp">
-          <h1>
-            <strong>Mulai Daftar Edumatrix Sekarang!</strong>
-          </h1>
-          <p className="p-supercamp">
-            Jika Anda saat ini membutuhkan pengajar atau instruktur terbaik dari
-            Edumatrix Indonesia, segera daftarkan diri Anda dengan menghubungi
-            kami melalui WhatsApp, telepon atau mengisi formulir pendaftaran.
-          </p>
+        <div className="mulai-daftar">
+          <div className="isi-supercamp">
+            <h1>
+              <strong>Mulai Daftar Edumatrix Sekarang!</strong>
+            </h1>
+            <p className="p-supercamp">
+              Jika Anda saat ini membutuhkan pengajar atau instruktur terbaik
+              dari Edumatrix Indonesia, segera daftarkan diri Anda dengan
+              menghubungi kami melalui WhatsApp, telepon atau mengisi formulir
+              pendaftaran.
+            </p>
+          </div>
+          <div className="btn-mulaidaftar">
+            <a
+              href="https://api.whatsapp.com/send?phone=+6281215523902&text=Halo%20Kak%2C%20Saya%20mau%20tanya%20mengenai%20bimbel%20diEdumatrix%20Terima%20kasih."
+              className="wa-supercamp"
+            >
+              <FontAwesomeIcon icon={faWhatsapp} /> WhatsApp
+            </a>
+            <a href="tel:+6281215523902" className="telp-supercamp">
+              <FontAwesomeIcon icon={faPhone} /> Telepon
+            </a>
+            <button
+              onClick={() => goToPendaftaran()}
+              className="form-supercamp"
+            >
+              <FontAwesomeIcon icon={faFile} /> Form Pendaftaran
+            </button>
+          </div>
         </div>
-        <div className="btn-mulaidaftar">
-          <a
-            href="https://api.whatsapp.com/send?phone=+6281215523902&text=Halo%20Kak%2C%20Saya%20mau%20tanya%20mengenai%20bimbel%20diEdumatrix%20Terima%20kasih."
-            className="wa-supercamp"
-          >
-            <FontAwesomeIcon icon={faWhatsapp} /> WhatsApp
-          </a>
-          <a href="tel:+6281215523902" className="telp-supercamp">
-            <FontAwesomeIcon icon={faPhone} /> Telepon
-          </a>
-          <button onClick={() => goToPendaftaran()} className="form-supercamp">
-            <FontAwesomeIcon icon={faFile} /> Form Pendaftaran
-          </button>
-        </div>
-      </div>
-      <WaFloat />
-      <Footer />
+        <WaFloat />
+        <Footer />
+      </AnimatedPage>
     </React.Fragment>
   );
 };

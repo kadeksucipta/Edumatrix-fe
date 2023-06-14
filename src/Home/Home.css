@@ -5,6 +5,7 @@
 .nav-all {
     display: flex;
     justify-content: end;
+    /* margin-right: 10%; */
 }
 .daftar {
     margin-left: 50px;

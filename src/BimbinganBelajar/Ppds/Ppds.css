@@ -1,0 +1,26 @@
+.img-ppds {
+  border-radius: 5px 60px 5px 60px;
+  border: 10px solid white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 50%;
+}
+.program-ppds1 {
+  display: flex;
+  justify-content: center;
+}
+.program-ppds {
+  text-align: center;
+  margin-top: 80px;
+  background: rgba(101, 183, 255, 0.337);
+  padding: 40px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    .img-ppds {
+      width: 100%;
+    }
+}
+@media only screen and (max-width: 550px) {
+
+}

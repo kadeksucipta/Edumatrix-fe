@@ -17,6 +17,14 @@ import CampEdu from './BimbinganBelajar/CampEdu/CampEdu';
 import Cpns from './BimbinganBelajar/Cpns/Cpns';
 import Bumn from './BimbinganBelajar/Bumn/Bumn';
 import SmaUnggul from './BimbinganBelajar/SmaUnggul/SmaUnggul';
+import Ppds from './BimbinganBelajar/Ppds/Ppds';
+import HomeSchool from './BimbinganBelajar/HomeSchool/HomeSchool';
+import Igcse from './BimbinganBelajar/Igcse/Igcse';
+import Iht from './BimbinganBelajar/Iht/Iht';
+import OnlineOffline from './Privat/OnlineOffline/OnlineOffline';
+import BimbelPendidikan from './Privat/BimbelPendidikan/BimbelPendidikan';
+import PrivatMahasiswa from './Privat/PrivatMahasiswa/PrivatMahasiswa';
+import PrivatIslam from './Privat/PrivatIslam/PrivatIslam';
 
 const router = createBrowserRouter([
   {
@@ -62,6 +70,38 @@ const router = createBrowserRouter([
   {
     path: "SmaUnggul",
     element: <SmaUnggul/>
+  },
+  {
+    path: "Ppds",
+    element: <Ppds/>
+  },
+  {
+    path: "HomeSchool",
+    element: <HomeSchool/>
+  },
+  {
+    path: "Igcse",
+    element: <Igcse/>
+  },
+  {
+    path: "Iht",
+    element: <Iht/>
+  },
+  {
+    path: "OnlineOffline",
+    element: <OnlineOffline/>
+  },
+  {
+    path: "BimbelPendidikan",
+    element: <BimbelPendidikan/>
+  },
+  {
+    path: "PrivatMahasiswa",
+    element: <PrivatMahasiswa/>
+  },
+  {
+    path: "PrivatIslam",
+    element: <PrivatIslam/>
   },
 ])
 

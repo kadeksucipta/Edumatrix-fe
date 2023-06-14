@@ -1,0 +1,61 @@
+.box-jabodetabek {
+  width: 100%;
+  height: auto;
+  background: rgba(101, 183, 255, 0.337);
+  margin-top: 80px;
+  padding: 30px;
+}
+.isi-jabodetabek {
+  column-count: 2;
+  margin-top: 50px;
+}
+.title-jabodetabek {
+  font-size: 35px;
+  text-align: left;
+}
+.box-kota {
+  width: 100%;
+  height: auto;
+  background: rgba(101, 183, 255, 0.337);
+  margin-top: 80px;
+  padding: 30px;
+}
+.isi-kota {
+  column-count: 3;
+  margin-top: 50px;
+}
+.title-kota {
+  font-size: 35px;
+  text-align: left;
+}
+.paket-igcse {
+  display: flex;
+  justify-content: center;
+}
+.paket-prioigcse {
+  width: 100%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-left: 20px;
+}
+.paket-delux {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.icon-pie {
+  background: rgb(1, 120, 232);
+  padding: 10px;
+  font-size: 50px;
+  border-radius: 100px;
+  color: white;
+}
+.icon-clip {
+    background: rgb(0, 246, 82);
+    padding: 10px;
+    font-size: 50px;
+    border-radius: 100px;
+    color: white;
+}

@@ -1,0 +1,11 @@
+.pro-teacher {
+    margin-top: 100px;
+    text-align: center;
+}
+
+/* RESPOSIVE */
+@media only screen and (max-width: 550px) {
+    .img-proteacher {
+        width: 100%;
+    }
+}

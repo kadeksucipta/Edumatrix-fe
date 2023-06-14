@@ -14,6 +14,7 @@ import Footer from "../Component/Footer/Footer";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import WaFloat from "../Component/WaFloat/WaFloat";
+import AnimatedPage from "../Component/Animate/Animate";
 
 const Landing = () => {
   const goToPendaftaran = () => {
@@ -50,6 +51,7 @@ const Landing = () => {
 
   return (
     <React.Fragment>
+      <AnimatedPage>
       <Header />
       <div className="box-landing">
         <Container>
@@ -318,6 +320,7 @@ const Landing = () => {
 
       <WaFloat />
       <Footer />
+      </AnimatedPage>
     </React.Fragment>
   );
 };

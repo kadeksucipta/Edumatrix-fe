@@ -8,6 +8,7 @@ import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import WaFloat from "../Component/WaFloat/WaFloat";
+import AnimatedPage from "../Component/Animate/Animate";
 
 const Ulasan = () => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const Ulasan = () => {
   const [user, setUser] = useState({
     username: "",
     pesan: "",
-    rating: ""
+    rating: "",
   });
 
   // DATA MASUK DATABASE
@@ -86,57 +87,59 @@ const Ulasan = () => {
       button: false,
       timer: 2000,
     });
-    goToHome()
+    goToHome();
   };
 
   return (
     <React.Fragment>
-      <Header />
-      <div className="content-ulasan">
-        <Container>
-          <Form onSubmit={onSubmitHandler}>
-            <Form.Group className="mb-3">
+      <AnimatedPage>
+        <Header />
+        <div className="content-ulasan">
+          <Container>
+            <Form onSubmit={onSubmitHandler}>
+              <Form.Group className="mb-3">
+                <Form.Label>
+                  <strong>Nama</strong>
+                </Form.Label>
+                <Form.Control
+                  onChange={onChangeHandler}
+                  value={user.username}
+                  name="username"
+                  type="text"
+                  placeholder="Masukan nama"
+                />
+              </Form.Group>
               <Form.Label>
-                <strong>Nama</strong>
+                <strong>Ulasan</strong>
               </Form.Label>
-              <Form.Control
+              <textarea
                 onChange={onChangeHandler}
-                value={user.username}
-                name="username"
-                type="text"
-                placeholder="Masukan nama"
-              />
-            </Form.Group>
-            <Form.Label>
-              <strong>Ulasan</strong>
-            </Form.Label>
-            <textarea
-              onChange={onChangeHandler}
-              value={user.pesan}
-              className="text-ulasan"
-              placeholder="beri ulasan..."
-              name="pesan"
-            ></textarea>
-            <Form.Group className="mb-3">
-              <Form.Label>
-                <strong>Rating</strong>
-              </Form.Label>
-              <Form.Control
-                onChange={onChangeHandler}
-                value={user.rating}
-                name="rating"
-                type="text"
-                placeholder="Berikan rating (contoh : 90/100)"
-              />
-            </Form.Group>
-            <button type="submit" className="btn-ulasan">
-              Kirim Ulasan
-            </button>
-          </Form>
-        </Container>
-      </div>
-      <WaFloat />
-      <Footer />
+                value={user.pesan}
+                className="text-ulasan"
+                placeholder="beri ulasan..."
+                name="pesan"
+              ></textarea>
+              <Form.Group className="mb-3">
+                <Form.Label>
+                  <strong>Rating</strong>
+                </Form.Label>
+                <Form.Control
+                  onChange={onChangeHandler}
+                  value={user.rating}
+                  name="rating"
+                  type="text"
+                  placeholder="Berikan rating (contoh : 90/100)"
+                />
+              </Form.Group>
+              <button type="submit" className="btn-ulasan">
+                Kirim Ulasan
+              </button>
+            </Form>
+          </Container>
+        </div>
+        <WaFloat />
+        <Footer />
+      </AnimatedPage>
     </React.Fragment>
   );
 };

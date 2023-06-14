@@ -36,6 +36,30 @@ const Header = () => {
   const goToSmaUnggul = () => {
     navigate("/SmaUnggul");
   };
+  const goToPpds = () => {
+    navigate("/Ppds");
+  };
+  const goToHomeSchool = () => {
+    navigate("/HomeSchool");
+  };
+  const goToIgcse = () => {
+    navigate("/Igcse");
+  };
+  const goToIht = () => {
+    navigate("/Iht");
+  };
+  const goToOnlineOffline = () => {
+    navigate("/OnlineOffline");
+  };
+  const goToBimbelPendidikan = () => {
+    navigate("/BimbelPendidikan");
+  };
+  const goToPrivatMahasiswa = () => {
+    navigate("/PrivatMahasiswa");
+  };
+  const goToPrivatIslam = () => {
+    navigate("/PrivatIslam");
+  };
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -56,40 +80,70 @@ const Header = () => {
           <Navbar.Brand href="#home"></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse className="nav-all" id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <NavDropdown title="Profile" id="basic-nav-dropdown">
-                <NavDropdown.Item onClick={() => goToProfileTutor()}>
-                  Pofile Tutor
-                </NavDropdown.Item>
-                <NavDropdown.Item onClick={() => goToContactKami()}>
-                  Kontak Kami
-                </NavDropdown.Item>
-                <NavDropdown.Item onClick={() => goToTentangKami()}>
-                  Tentang Kami
-                </NavDropdown.Item>
-              </NavDropdown>
+            <Container>
+              <Nav className="mr-auto">
+                <NavDropdown title="Profile" id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={() => goToProfileTutor()}>
+                    Pofile Tutor
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToContactKami()}>
+                    Kontak Kami
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToTentangKami()}>
+                    Tentang Kami
+                  </NavDropdown.Item>
+                </NavDropdown>
 
-              <NavDropdown title="Bimbingan Belajar" id="basic-nav-dropdown">
-                <NavDropdown.Item onClick={() => goToCampEdu()}>
-                  CAMP EDUMATRIX
-                </NavDropdown.Item>
-                <NavDropdown.Item onClick={() => goToCpns()}>
-                  Bimbel CPNS
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item onClick={() => goToBumn()}>Bimbel BUMN</NavDropdown.Item>
-                <NavDropdown.Item onClick={() => goToSmaUnggul()}>Bimbel SMA Unggulan</NavDropdown.Item>
-                <NavDropdown.Item>Les Privat SBMPTN</NavDropdown.Item>
-                <NavDropdown.Item>Les Privat CPNS</NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="Kursus" id="basic-nav-dropdown">
-                <NavDropdown.Item>Kursus Bahasa Asing</NavDropdown.Item>
-                <NavDropdown.Item>Kursus Kesenian</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item>Kursus Olahraga</NavDropdown.Item>
-                <NavDropdown.Item>Kursus Komputer</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
+                <NavDropdown title="Bimbingan Belajar" id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={() => goToCampEdu()}>
+                    CAMP EDUMATRIX
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item onClick={() => goToCpns()}>
+                    Bimbel CPNS
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToBumn()}>
+                    Bimbel BUMN
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToSmaUnggul()}>
+                    Bimbel SMA Unggulan
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToPpds()}>
+                    Bimbel PPDS
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item onClick={() => goToHomeSchool()}>
+                    HomeSchooling
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToIgcse()}>
+                    IGCSE, O Level, A Level & <br />
+                    IB Tutor Jakarta
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToIht()}>
+                    In House Training
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="Privat" id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={() => goToOnlineOffline()}>
+                    Les Privat (Online/Offline)
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToBimbelPendidikan()}>
+                    Bimbel Privat TK, SD, SMP & SMA
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToPrivatMahasiswa()}>
+                    Les Privat Mahasiswa Nasional & Internasional
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToPrivatIslam()}>Les Privat Agama Islam</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item>Les Privat Komputer & IT</NavDropdown.Item>
+                  <NavDropdown.Item>Les Privat Musik</NavDropdown.Item>
+                  <NavDropdown.Item>
+                    Les Privat TK, SD, SMP, SMA, UTBK, SNBT Terbaik
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>Les Privat BIPA</NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+            </Container>
             <Button
               onClick={() => goToPendaftaran()}
               style={{ background: "orange", border: "1px solid transparent" }}

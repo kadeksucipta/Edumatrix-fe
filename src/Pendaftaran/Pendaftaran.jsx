@@ -364,7 +364,7 @@ const Pendaftaran = () => {
           </div>
         </Container>
         <div className="box-keunggulan">
-          <h1>Kenapa Harus Pilih Edumatrix Indonesia ?</h1>
+          <h1><strong>Kenapa Harus Pilih Edumatrix Indonesia ?</strong></h1>
           <div className="box-edu">
             {keunggulan?.map((item, index) => (
               <Card
@@ -373,8 +373,8 @@ const Pendaftaran = () => {
                 key={index}
               >
                 <Card.Body className="card-edu">
-                  <Card.Text>0{item.price}</Card.Text>
-                  <Card.Title>{item.name}</Card.Title>
+                  <Card.Text><strong>0{item.price}</strong></Card.Text>
+                  <Card.Title><strong>{item.name}</strong></Card.Title>
                   <Card.Text>{item.description}</Card.Text>
                 </Card.Body>
               </Card>
@@ -383,7 +383,7 @@ const Pendaftaran = () => {
         </div>
 
         <div className="testimoni">
-          <h1>Apa Kata Mereka</h1>
+          <h1><strong>Apa Kata Mereka</strong></h1>
           <div className="box-edu">
             {testimoni?.map((item, index) => (
               <Card
@@ -392,7 +392,7 @@ const Pendaftaran = () => {
                 key={index}
               >
                 <Card.Body className="card-edu">
-                  <Card.Title>{item.name}</Card.Title>
+                  <Card.Title><strong>{item.name}</strong></Card.Title>
                   <button className="btn-testi">{item.sub}</button>
                   <Card.Text className="testi-alumni">{item.description}</Card.Text>
                 </Card.Body>

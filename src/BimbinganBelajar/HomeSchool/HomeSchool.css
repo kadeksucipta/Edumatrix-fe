@@ -1,0 +1,13 @@
+.img-cta {
+  width: 50%;
+  border-radius: 5px 60px 5px 60px;
+  border: 10px solid white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    .img-cta {
+        width: 100%;
+    }
+  }

@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "../../Component/Header/Header";
-import "./SmaUnggul.css";
+import AnimatedPage from "../../Component/Animate/Animate";
 import { Card, Container } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheck,
   faFile,
@@ -10,15 +11,14 @@ import {
   faPieChart,
   faSquareArrowUpRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "../../Component/Footer/Footer";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import WaFloat from "../../Component/WaFloat/WaFloat";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import WaFloat from "../../Component/WaFloat/WaFloat";
-import AnimatedPage from "../../Component/Animate/Animate";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import "./OnlineOffline.css";
 
-const SmaUnggul = () => {
+const OnlineOffline = () => {
   const goToPendaftaran = () => {
     navigate("/Pendaftaran");
   };
@@ -30,32 +30,29 @@ const SmaUnggul = () => {
       <AnimatedPage>
         <Header />
 
-        <div className="box-smaunggul">
-          <h1>
-            <strong>Bimbel Masuk SMA Unggulan</strong>
+        <div className="box-cpns">
+          <h1 className="text-center">
+            <strong>Les Privat Ke Rumah & Online</strong>
           </h1>
         </div>
 
         <Container>
           <div className="content-cpns">
             <img
-              className="img-smaunggul"
-              src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/CTA-6-800x800.jpg"
+              className="img-cpns"
+              src="https://edumatrix-indonesia.com/wp-content/uploads/2023/01/les-privat-utbk.jpeg"
               alt=""
             />
             <div className="text-cpns">
               <h1>
-                <strong>
-                  Bimbel Masuk SMA Unggulan Bersama Edumatrix Indonesia
-                </strong>
+                <strong>Les Privat Ke Rumah & Online</strong>
               </h1>
               <h5 className="h5-cpns">
-                Kami meyakini bahwa setiap orang yang ingin mendaftar SMA
-                Unggulan pastinya ingin lolos dari tes SMA Unggulan dengan
-                sebaik mungkin. Untuk itulah, mereka membutuhkan pendampingan
-                belajar profesional untuk memaksimalkan potensi terbaik. Supaya
-                bisa lolos tes SMA Unggulan dengan gemilang. Edumatrix Indonesia
-                adalah solusi yang kamu butuhkan.
+                Les privat guru ke rumah dan online adalah les privat yang
+                disediakan Edumatrix Indonesia sesuai dengan kebutuhan siswa.
+                Siswa bisa memilih untuk guru datang ke rumah atau melakukan
+                sistem belajar secara online. Les privat ini memiliki keunggulan
+                yakni lebih personal dan interaktif.
               </h5>
 
               <div>
@@ -65,111 +62,6 @@ const SmaUnggul = () => {
               </div>
             </div>
           </div>
-
-          {/* <div className="cpns-edu">
-          <Card className="card-cpns">
-            <Card.Title className="header-cpns">
-              <strong>Supercamp Garansi Priority Sukses Lolos CPNS 2023</strong>
-            </Card.Title>
-            <Card.Body>
-              <Card.Text className="column-cpns">
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Sistem Belajar Privat 1 on 2
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Belajar 4 Sesi per hari selama 1-2 minggu
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Room Hotel 1 kamar 2 Siswa
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Penginapan saat tes CPNS
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Modul Belajar Persiapan Tes CPNS
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Worksheet Prediktif Edumatrix Indonesia
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Assessment Pra-Karantina
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Free 7 Sesi Privat Online Pra-Karantina
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Try Out Setiap Hari
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Tryout Real Tes CPNS 2023
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Workshop TIU Mastery
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Workshop TKP Master
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Motivation Training
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Progress Report Setiap Minggu
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Coaching Session - Sukses Masuk CPNS
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Konsultasi Akademik Personal Khusus CPNS
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Tips & Trik Lulus Tes CPNS
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Analisa dan Evaluasi Hasil Belajar setiap hari
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Antar Jemput lokasi SNBT Yogyakarta
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Souvenir Supercamp Edumatrix
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Akomodasi, Makan & Laundry saat karantina
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon-cpns" icon={faCheck} />
-                  Dibimbing s.d Tes CPNS 2023
-                </li>
-              </Card.Text>
-              <button className="btn-cpns2">
-                <a href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Supercamp%20Garansi%20Priority%20Tes%20CPNS%202023.%20Mohon%20info%20selengkapnya%20...">
-                  <strong>Pilih Paket</strong>
-                </a>
-              </button>
-            </Card.Body>
-          </Card>
-        </div> */}
 
           <div className="oneonone">
             <div className="text-oneonone">
@@ -188,7 +80,7 @@ const SmaUnggul = () => {
                   <Card.Title className="text-center">
                     <FontAwesomeIcon className="icon-clip" icon={faPaperclip} />
                     <br />
-                    <strong>Paket Populer (5 & 10 Sesi)</strong>
+                    <strong>Paket Populer (10 Sesi)</strong>
                   </Card.Title>
                   <Card.Text>
                     <li>
@@ -505,6 +397,14 @@ const SmaUnggul = () => {
             </div>
           </div>
 
+          <div className="pro-teacher">
+            <img
+              className="img-proteacher"
+              src="https://edumatrix-indonesia.com/wp-content/uploads/2022/12/Group-561.jpg"
+              alt=""
+            />
+          </div>
+
           <div className="program-supercamp">
             <h1>
               <strong>Program Unggulan Edumatrix Indonesia 2023</strong>
@@ -517,15 +417,15 @@ const SmaUnggul = () => {
               <Card style={{ border: "none" }} className="card-supercamp">
                 <Card.Img
                   variant="top"
-                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/SMA-TARUNA-NUSANTARA-600x600.jpg"
+                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/TK-SD-SMP-SMA-600x600.jpg"
                 />
                 <Card.Body className="card-edumatrix">
                   <Card.Title>
-                    <strong>Bimbel SMA Taruna Nusantara</strong>
+                    <strong>Les Privat TK, SD, SMP & SMA 2023</strong>
                   </Card.Title>
                   <br />
                   <a
-                    href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Program%20Bimbel%20SMA%20Taruna%20Nusantara.%20Mohon%20info%20selengkapnya%20..."
+                    href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Les%20Privat%20TK,%20SD,%20SMP%20dan%20SMA.%20Mohon%20info%20selengkapnya%20..."
                     className="btn-chatnowsupercamp"
                   >
                     <strong>Chat Us Now!</strong>
@@ -536,15 +436,15 @@ const SmaUnggul = () => {
               <Card style={{ border: "none" }} className="card-supercamp">
                 <Card.Img
                   variant="top"
-                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/SMA-MH-THAMRIN-600x601.jpg"
+                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Bahasa-Asing-600x600.jpg"
                 />
                 <Card.Body className="card-edumatrix">
                   <Card.Title>
-                    <strong>Bimbel SMA MH Thamrin</strong>
+                    <strong>Les Privat Bahasa Asing 2023</strong>
                   </Card.Title>
                   <br />
                   <a
-                    href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Program%20Bimbel%20SMA%20MH%20Thamrin.%20Mohon%20info%20selengkapnya%20..."
+                    href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Private%20Bahasa%20Asing.%20Mohon%20info%20selengkapnya%20..."
                     className="btn-chatnowsupercamp"
                   >
                     <strong>Chat Us Now!</strong>
@@ -555,15 +455,17 @@ const SmaUnggul = () => {
               <Card style={{ border: "none" }} className="card-supercamp">
                 <Card.Img
                   variant="top"
-                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/SMAN-8-600x600.jpg"
+                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Mahasiswa-Nasional-dan-Internasional-600x600.jpg"
                 />
                 <Card.Body className="card-edumatrix">
                   <Card.Title>
-                    <strong>Bimbel SMAN 8 Jakarta</strong>
+                    <strong>
+                      Private for International School Students 2023
+                    </strong>
                   </Card.Title>
                   <br />
                   <a
-                    href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Program%20Bimbel%20SMAN%208%20Jakarta.%20Mohon%20info%20selengkapnya%20..."
+                    href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Tutor%20for%20International%20School%20Students.%20Mohon%20info%20selengkapnya%20..."
                     className="btn-chatnowsupercamp"
                   >
                     <strong>Chat Us Now!</strong>
@@ -574,15 +476,15 @@ const SmaUnggul = () => {
               <Card style={{ border: "none" }} className="card-supercamp">
                 <Card.Img
                   variant="top"
-                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/SMA-IC-600x601.jpg"
+                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/01/les-privat-utbk.jpeg"
                 />
                 <Card.Body className="card-edumatrix">
                   <Card.Title>
-                    <strong>Bimbel SMA Insan Cendekia</strong>
+                    <strong>Privat UTBK 2023 Online & Offline</strong>
                   </Card.Title>
                   <br />
                   <a
-                    href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Bimbel%20SMA%20Insan%20Cendekia.%20Mohon%20info%20selengkapnya%20..."
+                    href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Les%20Privat,%20Program%20Sukses%20Masuk%20FK%20dan%20PTN%202023.%20Mohon%20info%20selengkapnya%20..."
                     className="btn-chatnowsupercamp"
                   >
                     <strong>Chat Us Now!</strong>
@@ -629,4 +531,4 @@ const SmaUnggul = () => {
   );
 };
 
-export default SmaUnggul;
+export default OnlineOffline;

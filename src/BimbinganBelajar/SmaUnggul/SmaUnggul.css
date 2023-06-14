@@ -1,10 +1,25 @@
 .box-smaunggul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background: rgb(1, 120, 232);
+  color: white;
+  text-align: center;
+}
+.img-smaunggul {
+  border-radius: 5px 60px 5px 60px;
+  border: 10px solid white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 50%;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+  .img-smaunggul {
     width: 100%;
-    height: 100px;
-    background: rgb(1, 120, 232);
-    color: white;
-    text-align: center;
+  }
+}
+@media only screen and (max-width: 550px) {
 }
