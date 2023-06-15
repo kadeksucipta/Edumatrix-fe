@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
+import "./Snbt.css";
 import Header from "../../Component/Header/Header";
-import "./PrivatIslam.css";
-import AnimatedPage from "../../Component/Animate/Animate";
-import { Card, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheck,
@@ -12,13 +10,15 @@ import {
   faPieChart,
   faSquareArrowUpRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Card, Container } from "react-bootstrap";
 import WaFloat from "../../Component/WaFloat/WaFloat";
 import Footer from "../../Component/Footer/Footer";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import AnimatedPage from "../../Component/Animate/Animate";
 
-const PrivatIslam = () => {
+const Snbt = () => {
   const goToPendaftaran = () => {
     navigate("/Pendaftaran");
   };
@@ -26,63 +26,54 @@ const PrivatIslam = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [agama, setAgama] = useState([]);
+  const [snbt, setSnbt] = useState([]);
 
   useEffect(() => {
-    fetchAgamaIslam();
+    fetchSnbt();
   }, []);
 
-  const fetchAgamaIslam = () => {
-    fetch(`https://odd-puce-panther-tie.cyclic.app/api/agamaislam`)
+  const fetchSnbt = () => {
+    fetch(`https://odd-puce-panther-tie.cyclic.app/api/snbt`)
       .then((res) => res.json())
       .then((data) => {
-        setAgama(data.data);
+        setSnbt(data.data);
         // console.log(data);
       });
   };
-
   return (
     <React.Fragment>
       <AnimatedPage>
         <Header />
 
-        <div className="box-cpns">
-          <h1 className="text-center">
-            <strong>Les Privat Agama Islam</strong>
+        <div className="box-kedokteran">
+          <img
+            className="img-kedokteran"
+            src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Cover-Tengah-6-800x450.jpg"
+            alt=""
+          />
+          <h1 className="title-kedokteran">
+            <strong>Bimbel UTBK SNBT</strong>
           </h1>
         </div>
 
+        <div className="text-center mt-5">
+          <h1>Bimbel UTBK SNBT</h1>
+          <h5>
+            Bimbel UTBK SNBT by <strong>EDUMATRIX INDONESIA</strong> adalah
+            program Bimbel yang dikhususkan untuk Siswa yang ingin lolos UTBK
+            SNBT dengan gemilang.
+          </h5>
+        </div>
+
         <Container>
-          <div className="content-cpns">
-            <img
-              className="img-islam"
-              src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/CTA-2-1-800x799.jpg"
-              alt=""
-            />
-            <div className="text-cpns">
-              <h1>
-                <strong>Les Privat Agama Islam</strong>
-              </h1>
-              <h5 className="h5-cpns">
-                Bimbel Les Privat Agama Islam by <strong>EDUMATRIX INDONESIA</strong> adalah
-                program bimbel yang dikhususkan untuk Siswa yang ingin belajar
-                Agama Islam secara lebih spesifik dan terarah.
-              </h5>
-
-              <div>
-                <button onClick={() => goToPendaftaran()} className="btn-cpns1">
-                  Daftar Sekarang
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="parent-bimpend">
-            <h3 className="h3-bimpend"><strong>Keunggulan Les Privat Agama Islam</strong></h3>
+          <div className="parent-snbt">
+            <h3 className="h3-bimpend">
+              <strong>Kesulitan dalam UTBK SNBT</strong>
+            </h3>
             <div className="box-bimpend">
-              {agama?.map((item, index) => (
+              {snbt?.map((item, index) => (
                 <div className="keunggulan-bimpend">
-                  <Card className="card-islam" key={index}>
+                  <Card className="card-utbk" key={index}>
                     <Card.Body>
                       <Card.Title>
                         <strong>{item.name}</strong>
@@ -94,8 +85,10 @@ const PrivatIslam = () => {
               ))}
             </div>
           </div>
+        </Container>
 
-          <div className="oneonone">
+        <div className="oneonone">
+          <Container>
             <div className="text-oneonone">
               <h3>
                 <strong>1 on 1 - Home Tutoring</strong>
@@ -260,9 +253,11 @@ const PrivatIslam = () => {
                 </Card.Body>
               </Card>
             </div>
-          </div>
+          </Container>
+        </div>
 
-          <div className="smallgroup">
+        <div className="smallgroup">
+          <Container>
             <div className="text-smallgroup">
               <h3>
                 <strong>Small Group (1 on 2) - Home Tutoring</strong>
@@ -427,154 +422,129 @@ const PrivatIslam = () => {
                 </Card.Body>
               </Card>
             </div>
-          </div>
-
-          <div className="program-supercamp">
-            <h1>
-              <strong>Program Unggulan Edumatrix Indonesia 2023</strong>
-            </h1>
-            <h5>
-              Berikut adalah program unggulan yang dirancang untuk Anda agar
-              proses belajar semakin Efektif dan Efisien.
-            </h5>
-            <div className="program-supercamp1">
-              <Card style={{ border: "none" }} className="card-supercamp">
-                <Card.Img
-                  variant="top"
-                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Bahasa-Arab-600x601.jpg"
-                />
-                <Card.Body className="card-edumatrix">
-                  <Card.Title>
-                    <strong>Les Privat Bahasa Arab</strong>
-                  </Card.Title>
-                  <br />
-                  <a
-                    href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Program%20Les%20Privat%20Bahasa%20Arab.%20Mohon%20info%20selengkapnya%20..."
-                    className="btn-chatnowsupercamp"
-                  >
-                    <strong>Chat Us Now!</strong>
-                  </a>
-                </Card.Body>
-              </Card>
-
-              <Card style={{ border: "none" }} className="card-supercamp">
-                <Card.Img
-                  variant="top"
-                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Mengaji-Dasar-600x600.jpg"
-                />
-                <Card.Body className="card-edumatrix">
-                  <Card.Title>
-                    <strong>Les Privat Mengaji Dasar</strong>
-                  </Card.Title>
-                  <br />
-                  <a
-                    href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Program%20Les%20Privat%20Mengaji%20Dasar.%20Mohon%20info%20selengkapnya%20..."
-                    className="btn-chatnowsupercamp"
-                  >
-                    <strong>Chat Us Now!</strong>
-                  </a>
-                </Card.Body>
-              </Card>
-
-              <Card style={{ border: "none" }} className="card-supercamp">
-                <Card.Img
-                  variant="top"
-                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Mengaji-Lanjutan-600x600.jpg"
-                />
-                <Card.Body className="card-edumatrix">
-                  <Card.Title>
-                    <strong>Les Privat Mengaji Lanjutan</strong>
-                  </Card.Title>
-                  <br />
-                  <a
-                    href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Program%20Les%20Privat%20Mengaji%20Lanjutan.%20Mohon%20info%20selengkapnya%20..."
-                    className="btn-chatnowsupercamp"
-                  >
-                    <strong>Chat Us Now!</strong>
-                  </a>
-                </Card.Body>
-              </Card>
-
-              <Card style={{ border: "none" }} className="card-supercamp">
-                <Card.Img
-                  variant="top"
-                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Mujawwadah-dam-murattal-600x601.jpg"
-                />
-                <Card.Body className="card-edumatrix">
-                  <Card.Title>
-                    <strong>Les Privat Mujawwadah dan Murattal</strong>
-                  </Card.Title>
-                  <br />
-                  <a
-                    href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Bimbel%20Les%20Privat%20Mujawwadah%20dan%20Murattal.%20Mohon%20info%20selengkapnya%20..."
-                    className="btn-chatnowsupercamp"
-                  >
-                    <strong>Chat Us Now!</strong>
-                  </a>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-        </Container>
-
-        <Container>
-          <div className="program-pembelajaran">
-            <h2>
-              <strong>Program Pembelajaran</strong>
-            </h2>
-            <br />
-            <h5>
-              <strong>Privat Akademik Offline & Online</strong>
-            </h5>
-            <br />
-            <p>
-              <strong>Edumatrix Indonesia</strong> menyediakan program
-              pembelajaran secara offline & online yang bisa dipilih sesuai
-              kebutuhan siswa. Seperti private akademik online yang memungkinkan
-              proses pembelajaran bisa dilakukan jarak jauh. Selain akan lebih
-              efektif waktu, program privat belajar online ini juga memiliki
-              keuntungan lainnya.
-              <br />
-              <br />
-              Seperti proses pembelajaran akan berjalan sangat intensif karena
-              menggunakan sistem one on one. Artinya satu guru untuk siswa.
-              Dengan pendekatan ini, maka proses pembelajaran akan terjadi
-              secara lebih baik dan menguntungkan bagi peserta.
-              <br />
-              <br />
-              Ditambah setiap peserta yang mengikuti akan mendapatkan modul
-              pelajaran, e-book materi hingga rekaman proses pembelajaran. Hal
-              itu bisa dimanfaatkan untuk mengulang materi pembelajaran secara
-              mandiri untuk hasil yang lebih maksimal.
-              <br />
-              <br />
-              Sedangkan untuk private belajar ini juga bisa dilakukan offline
-              untuk mempertemukan guru dan siswa di tempat yang sama.
-            </p>
-
-            <br />
-            <h2>
-              <strong>Mengapa Sistem Belajarnya Private?</strong>
-            </h2>
-            <p>
-              Kami percaya bahwa sistem belajar yang berhasil adalah ketika
-              program belajar dijalankan secara intens dan memberikan kenyamanan
-              bagi pengajar maupun siswa. Hal ini kami wujudkan dengan sistem
-              belajar private di Edumatrix Indonesia. Sistem belajar private ini
-              dirancang untuk mendukung kebutuhan siswa demi belajar yang lebih
-              interaktif dan suportif.
-            </p>
-          </div>
-        </Container>
-
-        <div className="pro-teacher">
-          <img
-            className="img-proteacher"
-            src="https://edumatrix-indonesia.com/wp-content/uploads/2022/12/Group-561.jpg"
-            alt=""
-          />
+          </Container>
         </div>
 
+        <br />
+
+        <div className="box-mainedu">
+          <img
+            className="img-main"
+            src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Cover-Atas-4-2.jpg"
+            alt=""
+          />
+          <div className="overlay-text">
+            <h1>
+              <strong className="title-main">
+                Bimbel Masuk Kedokteran, PTN, & Kedinasan 2023
+              </strong>
+            </h1>
+
+            <h5 className="desk-main">
+              Bimbel Persiapan UTBK SNBT / SBMPTN, Simak UI, UTUL UGM, UM Undip,
+              dan Ujian Mandiri PTN. Edumatrix Indonesia - Bimbel Sukses Masuk
+              FK, PTN, & Kedinasan Terbaik.
+            </h5>
+
+            <div className="btn-konsul">
+              <button className="konsul">
+                <a href="tel:085600422188">Konsultasi Gratis</a>
+              </button>
+              <button className="proposal">
+                <a href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20tahu%20mengenai%20Program%20Edumatrix%2C%20Bimbel%20Persiapan%20Masuk%20Kedokteran.%20Bagaimana%20penjelasan%20detail%20programnya%3F">
+                  Request Proposal
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="program-supercamp">
+          <h1>
+            <strong>Program Unggulan Edumatrix Indonesia 2023</strong>
+          </h1>
+          <h5>
+            Berikut adalah program unggulan yang dirancang untuk Anda agar
+            proses belajar semakin Efektif dan Efisien.
+          </h5>
+          <div className="program-supercamp1">
+            <Card style={{ border: "none" }} className="card-supercamp">
+              <Card.Img
+                variant="top"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/SNBT-600x600.jpg"
+              />
+              <Card.Body className="card-edumatrix">
+                <Card.Title>
+                  <strong>Bimbel UTBK SNBT</strong>
+                </Card.Title>
+                <br />
+                <a
+                  href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Program%20Bimbel%20SNBT.%20Mohon%20info%20selengkapnya%20..."
+                  className="btn-chatnowsupercamp"
+                >
+                  <strong>Chat Us Now!</strong>
+                </a>
+              </Card.Body>
+            </Card>
+
+            <Card style={{ border: "none" }} className="card-supercamp">
+              <Card.Img
+                variant="top"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/UMPTN-cover-600x600.jpg"
+              />
+              <Card.Body className="card-edumatrix">
+                <Card.Title>
+                  <strong>Bimbel UMPTN</strong>
+                </Card.Title>
+                <br />
+                <a
+                  href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Program%20Bimbel%20UMPTN.%20Mohon%20info%20selengkapnya%20..."
+                  className="btn-chatnowsupercamp"
+                >
+                  <strong>Chat Us Now!</strong>
+                </a>
+              </Card.Body>
+            </Card>
+
+            <Card style={{ border: "none" }} className="card-supercamp">
+              <Card.Img
+                variant="top"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/CTA-UMPTKIN-600x600.jpg"
+              />
+              <Card.Body className="card-edumatrix">
+                <Card.Title>
+                  <strong>Bimbel UMPTKIN</strong>
+                </Card.Title>
+                <br />
+                <a
+                  href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Program%20Bimbel%20UMPTKIN.%20Mohon%20info%20selengkapnya%20..."
+                  className="btn-chatnowsupercamp"
+                >
+                  <strong>Chat Us Now!</strong>
+                </a>
+              </Card.Body>
+            </Card>
+
+            <Card style={{ border: "none" }} className="card-supercamp">
+              <Card.Img
+                variant="top"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Bimbel-Bahasa-Asing-CTA-1-600x600.jpg"
+              />
+              <Card.Body className="card-edumatrix">
+                <Card.Title>
+                  <strong>Bimbel Bahasa Asing</strong>
+                </Card.Title>
+                <br />
+                <a
+                  href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Bimbel%20Bahasa%20Asing.%20Mohon%20info%20selengkapnya%20..."
+                  className="btn-chatnowsupercamp"
+                >
+                  <strong>Chat Us Now!</strong>
+                </a>
+              </Card.Body>
+            </Card>
+          </div>
+        </div>
         <div className="mulai-daftar">
           <div className="isi-supercamp">
             <h1>
@@ -612,4 +582,4 @@ const PrivatIslam = () => {
   );
 };
 
-export default PrivatIslam;
+export default Snbt;

@@ -1,0 +1,117 @@
+.box-kedokteran {
+  width: 100%;
+  background: black;
+  width: 100%;
+  height: auto;
+}
+.img-kedokteran {
+  width: 100%;
+  height: 500px;
+  opacity: 80%;
+  object-fit: cover;
+  object-position: 50% 5%;
+}
+.title-kedokteran {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.box-dokprio {
+  background: rgba(251, 233, 221, 0.476);
+  padding-bottom: 50px;
+}
+.supercamp-dok {
+  display: grid;
+  justify-content: center;
+}
+.column-kedokteran {
+  column-count: 2;
+}
+.desk-kedokteran {
+  text-align: center;
+  padding: 100px;
+}
+.card-priodok {
+  width: 100%;
+  border: none;
+}
+.box-mainedu {
+  position: relative;
+  background: rgb(16, 16, 16);
+}
+.overlay-text {
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  color: white;
+}
+.img-main {
+  width: 100%;
+  opacity: 50%;
+}
+.konsul {
+    background: rgb(1, 120, 232);
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+.proposal {
+    background: orangered;
+    padding: 20px;
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+.desk-main {
+    margin-top: 20px;
+}
+.btn-konsul {
+    margin-top: 20px;
+}
+
+/* RESPOSIVE */
+@media only screen and (max-width: 768px) {
+  .title-kedokteran {
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    font-size: 40px;
+  }
+  .column-kedokteran {
+    column-count: 1;
+  }
+  .desk-kedokteran {
+    padding: 50px;
+  }
+  .btn-konsul {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .desk-kedokteran {
+    padding: 30px;
+  }
+  .title-main {
+    font-size: 15px;
+  }
+  .desk-main {
+    font-size: 10px;
+  }
+  .konsul {
+    padding: 5px;
+    font-size: 10px;
+  }
+  .proposal {
+    padding: 5px;
+    font-size: 10px;
+  }
+}

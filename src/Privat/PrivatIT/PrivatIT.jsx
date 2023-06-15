@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../Component/Header/Header";
-import "./PrivatIslam.css";
+// import "./PrivatIT.css"
 import AnimatedPage from "../../Component/Animate/Animate";
 import { Card, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,28 +18,28 @@ import WaFloat from "../../Component/WaFloat/WaFloat";
 import Footer from "../../Component/Footer/Footer";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
-const PrivatIslam = () => {
+const PrivatIT = () => {
   const goToPendaftaran = () => {
     navigate("/Pendaftaran");
   };
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  const [agama, setAgama] = useState([]);
+  const [kom, setKom] = useState([]);
 
   useEffect(() => {
     fetchAgamaIslam();
   }, []);
 
   const fetchAgamaIslam = () => {
-    fetch(`https://odd-puce-panther-tie.cyclic.app/api/agamaislam`)
+    fetch(`https://odd-puce-panther-tie.cyclic.app/api/privatkom`)
       .then((res) => res.json())
       .then((data) => {
-        setAgama(data.data);
+        setKom(data.data);
         // console.log(data);
       });
   };
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   return (
     <React.Fragment>
@@ -48,7 +48,7 @@ const PrivatIslam = () => {
 
         <div className="box-cpns">
           <h1 className="text-center">
-            <strong>Les Privat Agama Islam</strong>
+            <strong>Les Privat Komputer & IT</strong>
           </h1>
         </div>
 
@@ -56,17 +56,17 @@ const PrivatIslam = () => {
           <div className="content-cpns">
             <img
               className="img-islam"
-              src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/CTA-2-1-800x799.jpg"
+              src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/CTA-4-800x799.jpg"
               alt=""
             />
             <div className="text-cpns">
               <h1>
-                <strong>Les Privat Agama Islam</strong>
+                <strong>Les Privat Komputer dan IT</strong>
               </h1>
               <h5 className="h5-cpns">
-                Bimbel Les Privat Agama Islam by <strong>EDUMATRIX INDONESIA</strong> adalah
-                program bimbel yang dikhususkan untuk Siswa yang ingin belajar
-                Agama Islam secara lebih spesifik dan terarah.
+                Bimbel Les Privat Komputer dan IT by <strong>EDUMATRIX INDONESIA</strong> adalah
+                program Bimbel yang dikhususkan untuk Siswa yang ingin belajar
+                komputer dan IT yang disesuaikan dengan kebutuhan.
               </h5>
 
               <div>
@@ -78,11 +78,11 @@ const PrivatIslam = () => {
           </div>
 
           <div className="parent-bimpend">
-            <h3 className="h3-bimpend"><strong>Keunggulan Les Privat Agama Islam</strong></h3>
+            <h3 className="h3-bimpend"><strong>Keunggulan Les Privat Komputer dan IT</strong></h3>
             <div className="box-bimpend">
-              {agama?.map((item, index) => (
+              {kom?.map((item, index) => (
                 <div className="keunggulan-bimpend">
-                  <Card className="card-islam" key={index}>
+                  <Card className="card-bimpend" key={index}>
                     <Card.Body>
                       <Card.Title>
                         <strong>{item.name}</strong>
@@ -112,7 +112,7 @@ const PrivatIslam = () => {
                   <Card.Title className="text-center">
                     <FontAwesomeIcon className="icon-clip" icon={faPaperclip} />
                     <br />
-                    <strong>Paket Populer (10 Sesi)</strong>
+                    <strong>Paket Populer (5 & 10 Sesi)</strong>
                   </Card.Title>
                   <Card.Text>
                     <li>
@@ -441,15 +441,15 @@ const PrivatIslam = () => {
               <Card style={{ border: "none" }} className="card-supercamp">
                 <Card.Img
                   variant="top"
-                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Bahasa-Arab-600x601.jpg"
+                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Les-Privat-komputer-Basic-600x600.jpg"
                 />
                 <Card.Body className="card-edumatrix">
                   <Card.Title>
-                    <strong>Les Privat Bahasa Arab</strong>
+                    <strong>Les Privat Komputer Basic</strong>
                   </Card.Title>
                   <br />
                   <a
-                    href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Program%20Les%20Privat%20Bahasa%20Arab.%20Mohon%20info%20selengkapnya%20..."
+                    href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Program%20Les%20Privat%20Komputer%20dan%20IT%20basic..%20Mohon%20info%20selengkapnya%20..."
                     className="btn-chatnowsupercamp"
                   >
                     <strong>Chat Us Now!</strong>
@@ -460,15 +460,15 @@ const PrivatIslam = () => {
               <Card style={{ border: "none" }} className="card-supercamp">
                 <Card.Img
                   variant="top"
-                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Mengaji-Dasar-600x600.jpg"
+                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Les-Privat-Komputer-Intermediate-600x600.jpg"
                 />
                 <Card.Body className="card-edumatrix">
                   <Card.Title>
-                    <strong>Les Privat Mengaji Dasar</strong>
+                    <strong>Les Privat Komputer Intermediate</strong>
                   </Card.Title>
                   <br />
                   <a
-                    href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Program%20Les%20Privat%20Mengaji%20Dasar.%20Mohon%20info%20selengkapnya%20..."
+                    href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Program%20Les%20Privat%20Komputer%20Intermediate.%20Mohon%20info%20selengkapnya%20..."
                     className="btn-chatnowsupercamp"
                   >
                     <strong>Chat Us Now!</strong>
@@ -479,15 +479,15 @@ const PrivatIslam = () => {
               <Card style={{ border: "none" }} className="card-supercamp">
                 <Card.Img
                   variant="top"
-                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Mengaji-Lanjutan-600x600.jpg"
+                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Les-Privat-Komputer-Advance-600x601.jpg"
                 />
                 <Card.Body className="card-edumatrix">
                   <Card.Title>
-                    <strong>Les Privat Mengaji Lanjutan</strong>
+                    <strong>Les Private Komputer Advance</strong>
                   </Card.Title>
                   <br />
                   <a
-                    href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Program%20Les%20Privat%20Mengaji%20Lanjutan.%20Mohon%20info%20selengkapnya%20..."
+                    href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Program%20Les%20Privat%20Komputer%20Advance.%20Mohon%20info%20selengkapnya%20..."
                     className="btn-chatnowsupercamp"
                   >
                     <strong>Chat Us Now!</strong>
@@ -498,15 +498,15 @@ const PrivatIslam = () => {
               <Card style={{ border: "none" }} className="card-supercamp">
                 <Card.Img
                   variant="top"
-                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Mujawwadah-dam-murattal-600x601.jpg"
+                  src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Les-Privat-Komputer-Professional-600x601.jpg"
                 />
                 <Card.Body className="card-edumatrix">
                   <Card.Title>
-                    <strong>Les Privat Mujawwadah dan Murattal</strong>
+                    <strong>Les Privat Komputer Professional</strong>
                   </Card.Title>
                   <br />
                   <a
-                    href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Bimbel%20Les%20Privat%20Mujawwadah%20dan%20Murattal.%20Mohon%20info%20selengkapnya%20..."
+                    href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Bimbel%20Les%20Privat%20Komputer%20Professional.%20Mohon%20info%20selengkapnya%20..."
                     className="btn-chatnowsupercamp"
                   >
                     <strong>Chat Us Now!</strong>
@@ -612,4 +612,4 @@ const PrivatIslam = () => {
   );
 };
 
-export default PrivatIslam;
+export default PrivatIT;

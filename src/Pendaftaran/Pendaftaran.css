@@ -146,9 +146,9 @@
     margin-top: 10px;
 }
 
-.daftar-bimbelsekarang {
+/* .daftar-bimbelsekarang {
     -webkit-text-stroke: 1px white;
-}
+} */
 /* RESPONSIVE */
 @media only screen and (max-width: 768px) {
     .content-daftar {

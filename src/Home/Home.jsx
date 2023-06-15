@@ -79,6 +79,24 @@ const Home = () => {
   const goToPrivatIslam = () => {
     navigate("/PrivatIslam");
   };
+  const goToPrivatIT = () => {
+    navigate("/PrivatIT");
+  };
+  const goToPrivatMusik = () => {
+    navigate("/PrivatMusik");
+  };
+  const goToPrivatUtbk = () => {
+    navigate("/PrivatUtbk");
+  };
+  const goToPrivatBipa = () => {
+    navigate("/PrivatBipa");
+  };
+  const goToKedokteran = () => {
+    navigate("/Kedokteran");
+  };
+  const goToSnbt = () => {
+    navigate("/Snbt");
+  };
 
   const [user, setUser] = useState({
     username: "",
@@ -219,27 +237,41 @@ const Home = () => {
                       Les Privat Agama Islam
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => goToPrivatIT()}>
                       Les Privat Komputer & IT
                     </NavDropdown.Item>
-                    <NavDropdown.Item>Les Privat Musik</NavDropdown.Item>
-                    <NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => goToPrivatMusik()}>
+                      Les Privat Musik
+                    </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => goToPrivatUtbk()}>
                       Les Privat TK, SD, SMP, SMA, UTBK, SNBT Terbaik
                     </NavDropdown.Item>
-                    <NavDropdown.Item>Les Privat BIPA</NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => goToPrivatBipa()}>
+                      Les Privat BIPA
+                    </NavDropdown.Item>
                   </NavDropdown>
+
+                  <NavDropdown title="PTN" id="basic-nav-dropdown">
+                    <NavDropdown.Item onClick={() => goToKedokteran()}>
+                      BIMBEL KEDOKTERAN
+                    </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => goToSnbt()}>BIMBEL UTBK SNBT</NavDropdown.Item>
+                    <NavDropdown.Item>BIMBEL GAP YEAR</NavDropdown.Item>
+                    <NavDropdown.Item>BIMBEL UMPTN</NavDropdown.Item>
+                    <NavDropdown.Item>BIMBEL UMPTNKIN</NavDropdown.Item>
+                  </NavDropdown>
+                  <Button
+                    onClick={() => goToPendaftaran()}
+                    style={{
+                      background: "orangered",
+                      border: "1px solid transparent",
+                    }}
+                    className="daftar"
+                  >
+                    <strong>Pendaftaran</strong>
+                  </Button>
                 </Nav>
               </Container>
-              <Button
-                onClick={() => goToPendaftaran()}
-                style={{
-                  background: "orange",
-                  border: "1px solid transparent",
-                }}
-                className="daftar"
-              >
-                <strong>Pendaftaran</strong>
-              </Button>
             </Navbar.Collapse>
           </Container>
         </Navbar>

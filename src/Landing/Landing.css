@@ -15,7 +15,7 @@
   width: 100%;
   border-radius: 50px 5px 50px 5px;
   margin-top: 120px;
-  border: 10px solid white;
+  border: 5px solid white;
 }
 .btn-landing {
   margin-top: 70px;
@@ -30,6 +30,7 @@
 .desk-landing {
   margin-top: 30px;
   margin-bottom: 100px;
+  color: white;
 }
 .box-about {
   width: 100%;

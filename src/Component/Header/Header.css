@@ -7,5 +7,20 @@
   justify-content: end;
 }
 .daftar {
-  margin-left: 50px;
+  margin-left: 0;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+  .custom-nav {
+    display: grid;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .custom-nav {
+    display: grid;
+  }
+  .daftar {
+    display: grid;
+  }
 }

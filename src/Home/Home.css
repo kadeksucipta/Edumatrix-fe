@@ -281,6 +281,9 @@ li:hover {
         margin-left: 50%;
         margin-bottom: 80px;
     }
+    .daftar {
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 550px) {
     .box {
@@ -295,5 +298,8 @@ li:hover {
     }
     .main-card {
         width: 20rem;
+    }
+    .daftar {
+        width: 100%;
     }
 }

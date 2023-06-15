@@ -4,14 +4,22 @@
     border: 10px solid white;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+.card-islam {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 /* RESPOSIVE */
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 768px) {
     .img-islam {
         width: 100%;
     }
+    .card-islam {
+        margin-top: 20px;
+    }
 }
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 550px) {
     .img-islam {
         width: 100%;
     }

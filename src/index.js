@@ -25,6 +25,12 @@ import OnlineOffline from './Privat/OnlineOffline/OnlineOffline';
 import BimbelPendidikan from './Privat/BimbelPendidikan/BimbelPendidikan';
 import PrivatMahasiswa from './Privat/PrivatMahasiswa/PrivatMahasiswa';
 import PrivatIslam from './Privat/PrivatIslam/PrivatIslam';
+import PrivatIT from './Privat/PrivatIT/PrivatIT';
+import PrivatMusik from './Privat/PrivatMusik/PrivatMusik';
+import PrivatUtbk from './Privat/PrivatUtbk/PrivatUtbk';
+import PrivatBipa from './Privat/PrivatBipa/PrivatBipa';
+import Kedokteran from './Ptn/Kedokteran/Kedokteran';
+import Snbt from './Ptn/Snbt/Snbt';
 
 const router = createBrowserRouter([
   {
@@ -102,6 +108,30 @@ const router = createBrowserRouter([
   {
     path: "PrivatIslam",
     element: <PrivatIslam/>
+  },
+  {
+    path: "PrivatIT",
+    element: <PrivatIT/>
+  },
+  {
+    path: "PrivatMusik",
+    element: <PrivatMusik/>
+  },
+  {
+    path: "PrivatUtbk",
+    element: <PrivatUtbk/>
+  },
+  {
+    path: "PrivatBipa",
+    element: <PrivatBipa/>
+  },
+  {
+    path: "Kedokteran",
+    element: <Kedokteran/>
+  },
+  {
+    path: "Snbt",
+    element: <Snbt/>
   },
 ])
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../Component/Header/Header";
 import AnimatedPage from "../../Component/Animate/Animate";
 import { Card, Container } from "react-bootstrap";
@@ -21,6 +21,21 @@ import "./PrivatMahasiswa.css";
 const PrivatMahasiswa = () => {
   const goToPendaftaran = () => {
     navigate("/Pendaftaran");
+  };
+
+  const [mahasiswa, setMahasiswa] = useState([]);
+
+  useEffect(() => {
+    fetchPrivatMahasiswa();
+  }, []);
+
+  const fetchPrivatMahasiswa = () => {
+    fetch(`https://odd-puce-panther-tie.cyclic.app/api/privatmahasiswa`)
+      .then((res) => res.json())
+      .then((data) => {
+        setMahasiswa(data.data);
+        // console.log(data);
+      });
   };
 
   const dispatch = useDispatch();
@@ -63,6 +78,24 @@ const PrivatMahasiswa = () => {
                   Daftar Sekarang
                 </button>
               </div>
+            </div>
+          </div>
+
+          <div className="parent-bimpend">
+            <h3 className="h3-bimpend"><strong>Keunggulan Mengikuti Bimbel Privat Mahasiswa Nasional & Internasional</strong></h3>
+            <div className="box-bimpend">
+              {mahasiswa?.map((item, index) => (
+                <div className="keunggulan-bimpend">
+                  <Card className="card-bimpend" key={index}>
+                    <Card.Body>
+                      <Card.Title>
+                        <strong>{item.name}</strong>
+                      </Card.Title>
+                      <Card.Text>{item.description}</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </div>
+              ))}
             </div>
           </div>
 

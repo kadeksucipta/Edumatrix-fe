@@ -1,0 +1,11 @@
+.card-utbk {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    .card-utbk {
+        margin-top: 20px;
+    }
+}

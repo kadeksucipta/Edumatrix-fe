@@ -1,0 +1,40 @@
+.box-bimpend {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 80px; */
+}
+.keunggulan-bimpend {
+    display: flex;
+    justify-content: center;
+}
+.card-bimpend {
+    width: 25rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.card-bimpend:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 5px 5px 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.parent-bimpend {
+    margin-top: 80px;
+}
+.h3-bimpend {
+    text-align: center;
+}
+
+/* RESPOSIVE */
+@media only screen and (max-width: 768px) {
+    .box-bimpend {
+        display: grid;
+        width: 100%;
+    }
+    .card-bimpend {
+        margin-top: 20px;
+    }
+}
