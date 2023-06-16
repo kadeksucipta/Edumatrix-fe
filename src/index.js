@@ -31,6 +31,9 @@ import PrivatUtbk from './Privat/PrivatUtbk/PrivatUtbk';
 import PrivatBipa from './Privat/PrivatBipa/PrivatBipa';
 import Kedokteran from './Ptn/Kedokteran/Kedokteran';
 import Snbt from './Ptn/Snbt/Snbt';
+import Gapyear from './Ptn/Gapyear/Gapyear';
+import Umptn from './Ptn/Umptn/Umptn';
+import Umptnkin from './Ptn/Umptnkin/Umptnkin';
 
 const router = createBrowserRouter([
   {
@@ -132,6 +135,18 @@ const router = createBrowserRouter([
   {
     path: "Snbt",
     element: <Snbt/>
+  },
+  {
+    path: "Gapyear",
+    element: <Gapyear/>
+  },
+  {
+    path: "Umptn",
+    element: <Umptn/>
+  },
+  {
+    path: "Umptnkin",
+    element: <Umptnkin/>
   },
 ])
 

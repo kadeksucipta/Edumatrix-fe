@@ -1,0 +1,64 @@
+.btn-umptnkin {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.bagi-success {
+    column-count: 3;
+}
+.icon-success {
+    font-size: 10px;
+}
+.btn-alert {
+    background: orangered;
+    padding: 10px;
+    color: white;
+    border: none;
+    margin-left: 5px;
+}
+.btn-alert:hover {
+    background: rgb(227, 61, 0);
+}
+.title-our {
+    text-align: left;
+    margin-top: 80px;
+}
+.img-alumni {
+    text-align: center;
+}
+.img-itemalumni {
+    margin-top: 50px;
+}
+.icon-fasilitas {
+    font-size: 15px;
+}
+.fasilitas-program {
+    margin-top: 50px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    .bagi-success {
+        column-count: 2;
+    }
+    .btn-alert {
+        padding: 20px;
+    }
+    .img-itemalumni {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .bagi-success {
+        column-count: 1;
+    }
+    .btn-alert {
+        padding: 10px;
+    }
+    .btn-umptnkin {
+        padding: 10px;
+    }
+    .title-our {
+        padding: 10px;
+    }
+}

@@ -9,11 +9,17 @@
 .daftar {
   margin-left: 0;
 }
+.multi-dropdown {
+  margin-left: 9px;
+}
 
 /* RESPONSIVE */
 @media only screen and (max-width: 768px) {
   .custom-nav {
     display: grid;
+  }
+  .multi-dropdown {
+    margin-left: 17px;
   }
 }
 @media only screen and (max-width: 550px) {

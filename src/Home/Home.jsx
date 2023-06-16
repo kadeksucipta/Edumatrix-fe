@@ -97,6 +97,15 @@ const Home = () => {
   const goToSnbt = () => {
     navigate("/Snbt");
   };
+  const goToGapyear = () => {
+    navigate("/Gapyear");
+  };
+  const goToUmptn = () => {
+    navigate("/Umptn");
+  };
+  const goToUmptnkin = () => {
+    navigate("/Umptnkin");
+  };
 
   const [user, setUser] = useState({
     username: "",
@@ -222,7 +231,25 @@ const Home = () => {
                     <NavDropdown.Item onClick={() => goToIht()}>
                       In House Training
                     </NavDropdown.Item>
+
+                    <NavDropdown.Divider />
+                  <NavDropdown
+                    className="multi-dropdown"
+                    title="Taruna Edumatrix"
+                    id="basic-nav-dropdown"
+                  >
+                    <NavDropdown.Item onClick={() => goToProfileTutor()}>
+                      Bimbel AKMIL
+                    </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => goToContactKami()}>
+                      Bimbel AKPOL
+                    </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => goToTentangKami()}>
+                      Bimbel Sekolah Kedinasan
+                    </NavDropdown.Item>
                   </NavDropdown>
+                  </NavDropdown>
+                  
                   <NavDropdown title="Privat" id="basic-nav-dropdown">
                     <NavDropdown.Item onClick={() => goToOnlineOffline()}>
                       Les Privat (Online/Offline)
@@ -255,10 +282,18 @@ const Home = () => {
                     <NavDropdown.Item onClick={() => goToKedokteran()}>
                       BIMBEL KEDOKTERAN
                     </NavDropdown.Item>
-                    <NavDropdown.Item onClick={() => goToSnbt()}>BIMBEL UTBK SNBT</NavDropdown.Item>
-                    <NavDropdown.Item>BIMBEL GAP YEAR</NavDropdown.Item>
-                    <NavDropdown.Item>BIMBEL UMPTN</NavDropdown.Item>
-                    <NavDropdown.Item>BIMBEL UMPTNKIN</NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => goToSnbt()}>
+                      BIMBEL UTBK SNBT
+                    </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => goToGapyear()}>
+                      BIMBEL GAP YEAR
+                    </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => goToUmptn()}>
+                      BIMBEL UMPTN
+                    </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => goToUmptnkin()}>
+                      BIMBEL UMPTNKIN
+                    </NavDropdown.Item>
                   </NavDropdown>
                   <Button
                     onClick={() => goToPendaftaran()}

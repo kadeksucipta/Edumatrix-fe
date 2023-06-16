@@ -264,7 +264,7 @@ const CampEdu = () => {
                 </li>
               </Card.Text>
               <button className="btn-platinum">
-                <a href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Supercamp%20Garansi%20Priority%20Masuk%20PTN%202023.%20Mohon%20info%20selengkapnya%20...">
+                <a href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Supercamp%20Garansi%20Platinum%20Masuk%20PTN%202023.%20Mohon%20info%20selengkapnya%20...">
                   <strong>Pilih Paket</strong>
                 </a>
               </button>
@@ -355,7 +355,7 @@ const CampEdu = () => {
                 </li>
               </Card.Text>
               <button className="btn-gold">
-                <a href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Supercamp%20Garansi%20Priority%20Masuk%20PTN%202023.%20Mohon%20info%20selengkapnya%20...">
+                <a href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Supercamp%20Gold%20Sukses%20Masuk%20FK%20&%20PTN%202023.%20Mohon%20info%20selengkapnya%20...">
                   <strong>Pilih Paket</strong>
                 </a>
               </button>

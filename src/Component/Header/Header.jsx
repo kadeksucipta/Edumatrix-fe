@@ -7,6 +7,8 @@ import "./Header.css";
 import { Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const goToHome = () => {
@@ -78,6 +80,15 @@ const Header = () => {
   const goToSnbt = () => {
     navigate("/Snbt");
   };
+  const goToGapyear = () => {
+    navigate("/Gapyear");
+  };
+  const goToUmptn = () => {
+    navigate("/Umptn");
+  };
+  const goToUmptnkin = () => {
+    navigate("/Umptnkin");
+  };
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -140,7 +151,25 @@ const Header = () => {
                   <NavDropdown.Item onClick={() => goToIht()}>
                     In House Training
                   </NavDropdown.Item>
+
+                  <NavDropdown.Divider />
+                  <NavDropdown
+                    className="multi-dropdown"
+                    title="Taruna Edumatrix"
+                    id="basic-nav-dropdown"
+                  >
+                    <NavDropdown.Item onClick={() => goToProfileTutor()}>
+                      Bimbel AKMIL
+                    </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => goToContactKami()}>
+                      Bimbel AKPOL
+                    </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => goToTentangKami()}>
+                      Bimbel Sekolah Kedinasan
+                    </NavDropdown.Item>
+                  </NavDropdown>
                 </NavDropdown>
+
                 <NavDropdown title="Privat" id="basic-nav-dropdown">
                   <NavDropdown.Item onClick={() => goToOnlineOffline()}>
                     Les Privat (Online/Offline)
@@ -164,15 +193,27 @@ const Header = () => {
                   <NavDropdown.Item onClick={() => goToPrivatUtbk()}>
                     Les Privat TK, SD, SMP, SMA, UTBK, SNBT Terbaik
                   </NavDropdown.Item>
-                  <NavDropdown.Item onClick={() => goToPrivatBipa()}>Les Privat BIPA</NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToPrivatBipa()}>
+                    Les Privat BIPA
+                  </NavDropdown.Item>
                 </NavDropdown>
 
                 <NavDropdown title="PTN" id="basic-nav-dropdown">
-                  <NavDropdown.Item onClick={() => goToKedokteran()}>BIMBEL KEDOKTERAN</NavDropdown.Item>
-                  <NavDropdown.Item onClick={() => goToSnbt()}>BIMBEL UTBK SNBT</NavDropdown.Item>
-                  <NavDropdown.Item>BIMBEL GAP YEAR</NavDropdown.Item>
-                  <NavDropdown.Item>BIMBEL UMPTN</NavDropdown.Item>
-                  <NavDropdown.Item>BIMBEL UMPTNKIN</NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToKedokteran()}>
+                    BIMBEL KEDOKTERAN
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToSnbt()}>
+                    BIMBEL UTBK SNBT
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToGapyear()}>
+                    BIMBEL GAP YEAR
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToUmptn()}>
+                    BIMBEL UMPTN
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => goToUmptnkin()}>
+                    BIMBEL UMPTNKIN
+                  </NavDropdown.Item>
                 </NavDropdown>
                 <Button
                   onClick={() => goToPendaftaran()}

@@ -1,3 +1,8 @@
 .parent-snbt {
     margin-top: 100px;
 }
+.box-mainsnbt {
+    position: relative;
+    background: rgb(16, 16, 16);
+    margin-top: 80px;
+}

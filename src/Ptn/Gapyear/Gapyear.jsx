@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./Kedokteran.css";
+import React, { useEffect, useState } from "react";
+import "./Gapyear.css";
 import Header from "../../Component/Header/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowsTurnRight, faCheck, faCircle, faFile, faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -10,10 +10,9 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import AnimatedPage from "../../Component/Animate/Animate";
-import { useEffect } from "react";
 import swal from "sweetalert";
 
-const Kedokteran = () => {
+const Gapyear = () => {
   const goToPendaftaran = () => {
     navigate("/Pendaftaran");
   };
@@ -21,11 +20,22 @@ const Kedokteran = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const [keunggulan, setKeunggulan] = useState([]);
   const [fasilitas, setFasilitas] = useState([]);
 
   useEffect(() => {
-    fetchFasilitas();
+    fetchKeunggulan();
+    fetchFasilitas()
   }, []);
+
+  const fetchKeunggulan = () => {
+    fetch(`https://odd-puce-panther-tie.cyclic.app/api/keunggulan`)
+      .then((res) => res.json())
+      .then((data) => {
+        setKeunggulan(data.data);
+        // console.log(data);
+      });
+  };
 
   const fetchFasilitas = () => {
     fetch(`https://odd-puce-panther-tie.cyclic.app/api/fasilitas`)
@@ -67,7 +77,6 @@ const Kedokteran = () => {
       button: "OK",
     });
   };
-
   return (
     <React.Fragment>
       <AnimatedPage>
@@ -76,139 +85,53 @@ const Kedokteran = () => {
         <div className="box-kedokteran">
           <img
             className="img-kedokteran"
-            src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/image-asian-male-female-doctor_296537-5186.jpg"
+            src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/1-2-1-1200x676.jpg"
             alt=""
           />
           <h1 className="title-kedokteran">
-            {/* <strong>Bimbel Masuk Kedokteran</strong> */}
+            {/* <strong>Program GAPYEAR</strong> */}
           </h1>
         </div>
 
-        <div className="box-dokprio">
-          <h5 className="desk-kedokteran">
-            Bimbel Masuk Kedokteran by <strong>EDUMATRIX INDONESIA</strong>{" "}
-            merupakan program belajar dengan sistem karantina dan privat yang
-            berfokus pada akselerasi kemampuan siswa dalam mengerjakan soal dan
-            mendapatkan skor terbaik sehingga memperbesar kemungkinan untuk
-            Lolos Masuk FK PTN Favorit Indonesia.
+        <div className="box-gapyear">
+          <h3 className="subtitle-gapyear">
+            Drilling Soal Intensif + Pembahasan On Point + Tips Trick “Rahasia”
+          </h3>
+          <h5 className="desk-gapyear">
+            <Container>
+              Ikuti <strong>Program Sukses SNBT 2023</strong> untuk kamu yang
+              sempat GAP YEAR dengan <strong>Master Teacher Favorit</strong>{" "}
+              yang akan memberikan pemahaman terkait SNBT 2023 dan tips trik
+              mengerjakan soal secara cepat dan tepat. Sukses SNBT 2023,{" "}
+              <strong>Masuk PTN Favorit, Bersama Edumatrix Indonesia.</strong>
+            </Container>
           </h5>
-          <div className="supercamp-dok">
-            <Card className="card-priodok">
-              <Card.Title className="header-priority">
-                <strong>
-                  Supercamp Garansi Priority Sukses Masuk Kedokteran 2023
-                </strong>
-              </Card.Title>
-              <Card.Body>
-                <Card.Text className="column-kedokteran">
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Sistem Belajar Privat 1 on 1
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Belajar 5 Sesi per Hari Selama 4-6 Minggu
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Room Hotel 1 kamar 1 Siswa
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Penginapan saat tes SNBT
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Modul Belajar SNBT, UTUL UGM, & SIMAK UI
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Worksheet Prediktif Edumatrix Indonesia
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Assessment Pra-Karantina
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Free Live Class Pra-Karantina
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Try Out Setiap Hari
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Tryout Real SNBT, UTUL UGM, & SIMAK UI
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Workshop TPS Mastery
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Workshop Math Master
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Motivation Training
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Progress Report Setiap Minggu
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Coaching Session - Sukses Masuk FK
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Konsultasi Akademik Personal Khusus Jurusan Kedokteran
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Tips & Trik Lulus Tes SNBT, UTUL UGM & Simak UI 2023
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Free Biaya Pendaftaran SNBT 2023
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Free Biaya Pendaftaran Simak UI/UTUL UGM/UM Undip
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Analisa dan Evaluasi Hasil Belajar setiap hari
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Antar Jemput lokasi SNBT Yogyakarta
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Free Konsultasi dan Pendampingan Ujian Mandiri
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Souvenir Supercamp Edumatrix
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Akomodasi, Makan & Laundry saat karantina
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Dibimbing s.d Tembus Fakultas Kedokteran
-                  </li>
-                </Card.Text>
-                <button className="btn-priority">
-                  <a href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Supercamp%20Garansi%20Priority%20Masuk%20Kedokteran%202023.%20Mohon%20info%20selengkapnya%20...">
-                    <strong>Pilih Paket</strong>
-                  </a>
-                </button>
-              </Card.Body>
-            </Card>
+        </div>
+
+        <div className="keunggulan-gapyear">
+          <div className="benefit-eduatrix">
+            <Container>
+              <h4 className="text-benefit1">Keunggulan Edumatrix Indonesia</h4>
+              <h1 className="text-benefit2">
+                <strong>Apa yang Anda Dapatkan dari Kami?</strong>
+              </h1>
+              <div className="box-benefit">
+                {keunggulan?.map((item, index) => (
+                  <Card
+                    style={{ border: "none" }}
+                    className="card-benefit"
+                    key={index}
+                  >
+                    <Card.Body className="card-edumatrix">
+                      <Card.Title>
+                        <strong>{item.name}</strong>
+                      </Card.Title>
+                      <Card.Text>{item.description}</Card.Text>
+                    </Card.Body>
+                  </Card>
+                ))}
+              </div>
+            </Container>
           </div>
         </div>
 
@@ -220,15 +143,13 @@ const Kedokteran = () => {
           />
           <div className="overlay-text">
             <h1>
-              <strong className="title-main">
-                Bimbel Masuk Kedokteran, PTN, & Kedinasan 2023
-              </strong>
+              <strong className="title-main">Bimbel GAPYEAR</strong>
             </h1>
 
             <h5 className="desk-main">
-              Bimbel Persiapan UTBK SNBT / SBMPTN, Simak UI, UTUL UGM, UM Undip,
-              dan Ujian Mandiri PTN. Edumatrix Indonesia - Bimbel Sukses Masuk
-              FK, PTN, & Kedinasan Terbaik.
+              Bimbel Persiapan untuk Lolos Tes Masuk PTN Favorit, untuk kamu
+              yang sempat GAP YEAR dengan Master Teacher Favorit di Indonesia.
+              Dengan Sistem Belajar Intensif dan Tingkat Kelulusan yang Tinggi
             </h5>
 
             <div className="btn-konsul">
@@ -796,4 +717,4 @@ const Kedokteran = () => {
   );
 };
 
-export default Kedokteran;
+export default Gapyear;

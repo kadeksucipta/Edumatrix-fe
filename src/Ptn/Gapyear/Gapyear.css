@@ -1,0 +1,17 @@
+.subtitle-gapyear {
+  text-align: center;
+  color: rgb(1, 120, 232);
+  margin-top: 80px;
+}
+.desk-gapyear {
+  text-align: center;
+}
+
+@media only screen and (max-width: 550px) {
+  .subtitle-gapyear {
+    padding: 10px;
+  }
+  .desk-gapyear {
+    padding: 10px;
+  }
+}

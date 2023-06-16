@@ -1,8 +1,14 @@
-import React, { useState } from "react";
-import "./Kedokteran.css";
+import React, { useEffect, useState } from "react";
+import "./Umptn.css";
 import Header from "../../Component/Header/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowsTurnRight, faCheck, faCircle, faFile, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+    faArrowsTurnRight,
+  faCheck,
+  faCircle,
+  faFile,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import { Card, Container } from "react-bootstrap";
 import WaFloat from "../../Component/WaFloat/WaFloat";
 import Footer from "../../Component/Footer/Footer";
@@ -10,10 +16,9 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import AnimatedPage from "../../Component/Animate/Animate";
-import { useEffect } from "react";
 import swal from "sweetalert";
 
-const Kedokteran = () => {
+const Umptn = () => {
   const goToPendaftaran = () => {
     navigate("/Pendaftaran");
   };
@@ -21,11 +26,22 @@ const Kedokteran = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const [ptn, setPtn] = useState([]);
   const [fasilitas, setFasilitas] = useState([]);
 
   useEffect(() => {
+    fetchPtnFavorite();
     fetchFasilitas();
   }, []);
+
+  const fetchPtnFavorite = () => {
+    fetch(`https://odd-puce-panther-tie.cyclic.app/api/ptnfavorit`)
+      .then((res) => res.json())
+      .then((data) => {
+        setPtn(data.data);
+        // console.log(data);
+      });
+  };
 
   const fetchFasilitas = () => {
     fetch(`https://odd-puce-panther-tie.cyclic.app/api/fasilitas`)
@@ -76,140 +92,157 @@ const Kedokteran = () => {
         <div className="box-kedokteran">
           <img
             className="img-kedokteran"
-            src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/image-asian-male-female-doctor_296537-5186.jpg"
+            src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/UMPTN-cover-TENGAH-800x450.jpg"
             alt=""
           />
           <h1 className="title-kedokteran">
-            {/* <strong>Bimbel Masuk Kedokteran</strong> */}
+            {/* <strong>Bimbel UMPTN</strong> */}
           </h1>
         </div>
 
         <div className="box-dokprio">
           <h5 className="desk-kedokteran">
-            Bimbel Masuk Kedokteran by <strong>EDUMATRIX INDONESIA</strong>{" "}
-            merupakan program belajar dengan sistem karantina dan privat yang
-            berfokus pada akselerasi kemampuan siswa dalam mengerjakan soal dan
-            mendapatkan skor terbaik sehingga memperbesar kemungkinan untuk
-            Lolos Masuk FK PTN Favorit Indonesia.
+            “Bimbel UMPTN by <strong>EDUMATRIX INDONESIA</strong> adalah program
+            Bimbel yang dikhususkan untuk Siswa yang ingin lolos tes masuk PTN
+            (Perguruan Tinggi Negeri) favorit”
           </h5>
-          <div className="supercamp-dok">
-            <Card className="card-priodok">
-              <Card.Title className="header-priority">
-                <strong>
-                  Supercamp Garansi Priority Sukses Masuk Kedokteran 2023
-                </strong>
-              </Card.Title>
-              <Card.Body>
-                <Card.Text className="column-kedokteran">
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Sistem Belajar Privat 1 on 1
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Belajar 5 Sesi per Hari Selama 4-6 Minggu
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Room Hotel 1 kamar 1 Siswa
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Penginapan saat tes SNBT
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Modul Belajar SNBT, UTUL UGM, & SIMAK UI
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Worksheet Prediktif Edumatrix Indonesia
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Assessment Pra-Karantina
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Free Live Class Pra-Karantina
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Try Out Setiap Hari
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Tryout Real SNBT, UTUL UGM, & SIMAK UI
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Workshop TPS Mastery
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Workshop Math Master
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Motivation Training
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Progress Report Setiap Minggu
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Coaching Session - Sukses Masuk FK
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Konsultasi Akademik Personal Khusus Jurusan Kedokteran
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Tips & Trik Lulus Tes SNBT, UTUL UGM & Simak UI 2023
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Free Biaya Pendaftaran SNBT 2023
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Free Biaya Pendaftaran Simak UI/UTUL UGM/UM Undip
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Analisa dan Evaluasi Hasil Belajar setiap hari
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Antar Jemput lokasi SNBT Yogyakarta
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Free Konsultasi dan Pendampingan Ujian Mandiri
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Souvenir Supercamp Edumatrix
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Akomodasi, Makan & Laundry saat karantina
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
-                    Dibimbing s.d Tembus Fakultas Kedokteran
-                  </li>
-                </Card.Text>
-                <button className="btn-priority">
-                  <a href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Supercamp%20Garansi%20Priority%20Masuk%20Kedokteran%202023.%20Mohon%20info%20selengkapnya%20...">
-                    <strong>Pilih Paket</strong>
-                  </a>
-                </button>
-              </Card.Body>
-            </Card>
+        </div>
+
+        <Container>
+          <div className="parent-umptn">
+            <h3 className="h3-bimpend">
+              <strong>Keunggulan Masuk PTN Favorit</strong>
+            </h3>
+            <div className="box-bimpend">
+              {ptn?.map((item, index) => (
+                <div className="keunggulan-bimpend">
+                  <Card className="card-utbk" key={index}>
+                    <Card.Body>
+                      <Card.Title>
+                        <strong>{item.name}</strong>
+                      </Card.Title>
+                      <Card.Text>{item.description}</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </div>
+              ))}
+            </div>
           </div>
+        </Container>
+
+        <div className="supercamp-dok">
+          <Card className="card-priodok">
+            <Card.Title className="header-priority">
+              <strong>
+                Supercamp Edumatrix Indonesia Priority Sukses UMPTN 2023
+              </strong>
+            </Card.Title>
+            <Card.Body>
+              <Card.Text className="column-kedokteran">
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Sistem Belajar Small Class
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Belajar 4 Sesi per Hari Selama 4-6 Minggu
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Tempat Tinggal Selama Tes
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Penginapan saat tes UMPTN
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Modul Belajar UMPTN 2023
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Worksheet Prediktif Edumatrix Indonesia
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Assessment Pra-Karantina
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Free Live Class Pra-Karantina
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Try Out Setiap Hari
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Tryout Real Tes UMPTN 2023
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Workshop TPA Mastery
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Workshop Engglish Master
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Motivation Training
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Progress Report Setiap Minggu
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Coaching Session - Sukses Masuk UMPTN 2023
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Konsultasi Akademik Personal
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Tips & Trik Lulus Tes UMPTN 2023
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Free Biaya Pendaftaran UMPTN 2023
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Free Biaya Psikotest
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Training
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Analisa dan Evaluasi Hasil Belajar setiap hari
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Free Konsultasi dan Pendampingan Tes UMPTN 2023
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Akomodasi, Makan & Laundry saat karantina
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon-campedu" icon={faCheck} />
+                  Dibimbing Mentor Profesional
+                </li>
+              </Card.Text>
+              <button className="btn-priority">
+                <a href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20program%20UMPTN%202023.%20Mohon%20info%20selengkapnya%20...">
+                  <strong>Pilih Paket</strong>
+                </a>
+              </button>
+            </Card.Body>
+          </Card>
         </div>
 
         <div className="box-mainedu">
@@ -220,15 +253,12 @@ const Kedokteran = () => {
           />
           <div className="overlay-text">
             <h1>
-              <strong className="title-main">
-                Bimbel Masuk Kedokteran, PTN, & Kedinasan 2023
-              </strong>
+              <strong className="title-main">Bimbel UMPTN</strong>
             </h1>
 
             <h5 className="desk-main">
-              Bimbel Persiapan UTBK SNBT / SBMPTN, Simak UI, UTUL UGM, UM Undip,
-              dan Ujian Mandiri PTN. Edumatrix Indonesia - Bimbel Sukses Masuk
-              FK, PTN, & Kedinasan Terbaik.
+              Bimbel Persiapan untuk Lolos Tes Masuk PTN Favorit di Indonesia.
+              Dengan Sistem Belajar Intensif dan Tingkat Kelulusan yang Tinggi
             </h5>
 
             <div className="btn-konsul">
@@ -301,19 +331,21 @@ const Kedokteran = () => {
             Berikut adalah program unggulan yang dirancang untuk Anda agar
             proses belajar semakin Efektif dan Efisien.
           </h5>
+
+          {/* #1 */}
           <div className="program-supercamp1">
             <Card style={{ border: "none" }} className="card-supercamp">
               <Card.Img
                 variant="top"
-                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/01/bimbel-masuk-kedokteran.jpeg"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/UI-600x600.jpg"
               />
               <Card.Body className="card-edumatrix">
                 <Card.Title>
-                  <strong>Program Supercamp Kedokteran 2023</strong>
+                  <strong>Bimbel UMPTN UI 2023</strong>
                 </Card.Title>
                 <br />
                 <a
-                  href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Supercamp%20Garansi%20Priority%20Masuk%20Kedokteran%202023.%20Mohon%20info%20selengkapnya%20..."
+                  href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Bimbel%20UMPTN%20UI%202023.%20Mohon%20info%20selengkapnya%20..."
                   className="btn-chatnowsupercamp"
                 >
                   <strong>Chat Us Now!</strong>
@@ -324,15 +356,15 @@ const Kedokteran = () => {
             <Card style={{ border: "none" }} className="card-supercamp">
               <Card.Img
                 variant="top"
-                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/01/bimbel-masuk-ptn.jpeg"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/UGM-600x600.jpg"
               />
               <Card.Body className="card-edumatrix">
                 <Card.Title>
-                  <strong>Program Supercamp Sukses PTN 2023</strong>
+                  <strong>Bimbel UMPTN UGM 2023</strong>
                 </Card.Title>
                 <br />
                 <a
-                  href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Supercamp%20Garansi%20Priority%20Masuk%20PTN%202023.%20Mohon%20info%20selengkapnya%20..."
+                  href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Bimbel%20UMPTN%20UGM%202023.%20Mohon%20info%20selengkapnya%20..."
                   className="btn-chatnowsupercamp"
                 >
                   <strong>Chat Us Now!</strong>
@@ -343,15 +375,15 @@ const Kedokteran = () => {
             <Card style={{ border: "none" }} className="card-supercamp">
               <Card.Img
                 variant="top"
-                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/01/les-privat-snbt-600x640.jpeg"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/ITB-600x600.jpg"
               />
               <Card.Body className="card-edumatrix">
                 <Card.Title>
-                  <strong>Kelas Intensif Sukses SNBT 2023</strong>
+                  <strong>Bimbel UMPTN ITB 2023</strong>
                 </Card.Title>
                 <br />
                 <a
-                  href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Kelas%20Intensif,%20Program%20Sukses%20Masuk%20FK%20&%20PTN%202023.%20Mohon%20info%20selengkapnya%20..."
+                  href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Bimbel%20UMPTN%20ITB%202023.%20Mohon%20info%20selengkapnya%20..."
                   className="btn-chatnowsupercamp"
                 >
                   <strong>Chat Us Now!</strong>
@@ -362,15 +394,173 @@ const Kedokteran = () => {
             <Card style={{ border: "none" }} className="card-supercamp">
               <Card.Img
                 variant="top"
-                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/01/les-privat-utbk.jpeg"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/IPB-600x600.jpg"
               />
               <Card.Body className="card-edumatrix">
                 <Card.Title>
-                  <strong>Privat UTBK 2023 Online & Offline</strong>
+                  <strong>Bimbel UMPTN IPB 2023</strong>
                 </Card.Title>
                 <br />
                 <a
-                  href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Les%20Privat,%20Program%20Sukses%20Masuk%20FK%20dan%20PTN%202023.%20Mohon%20info%20selengkapnya%20..."
+                  href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Bimbel%20UMPTN%20IPB%202023.%20Mohon%20info%20selengkapnya%20..."
+                  className="btn-chatnowsupercamp"
+                >
+                  <strong>Chat Us Now!</strong>
+                </a>
+              </Card.Body>
+            </Card>
+          </div>
+
+          {/* #2 */}
+          <div className="program-supercamp1">
+            <Card style={{ border: "none" }} className="card-supercamp">
+              <Card.Img
+                variant="top"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/UNSOED-600x600.jpg"
+              />
+              <Card.Body className="card-edumatrix">
+                <Card.Title>
+                  <strong>Bimbel UMPTN UNSOED 2023</strong>
+                </Card.Title>
+                <br />
+                <a
+                  href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Bimbel%20UMPTN%20UNSOED%202023.%20Mohon%20info%20selengkapnya%20..."
+                  className="btn-chatnowsupercamp"
+                >
+                  <strong>Chat Us Now!</strong>
+                </a>
+              </Card.Body>
+            </Card>
+
+            <Card style={{ border: "none" }} className="card-supercamp">
+              <Card.Img
+                variant="top"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/UNPAD-600x600.jpg"
+              />
+              <Card.Body className="card-edumatrix">
+                <Card.Title>
+                  <strong>Bimbel UMPTN UNPAD 2023</strong>
+                </Card.Title>
+                <br />
+                <a
+                  href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Bimbel%20UMPTN%20UNPAD%202023.%20Mohon%20info%20selengkapnya%20..."
+                  className="btn-chatnowsupercamp"
+                >
+                  <strong>Chat Us Now!</strong>
+                </a>
+              </Card.Body>
+            </Card>
+
+            <Card style={{ border: "none" }} className="card-supercamp">
+              <Card.Img
+                variant="top"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/UNHAS-600x600.jpg"
+              />
+              <Card.Body className="card-edumatrix">
+                <Card.Title>
+                  <strong>Bimbel UMPTN UNHAS 2023</strong>
+                </Card.Title>
+                <br />
+                <a
+                  href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Bimbel%20UMPTN%20UNHAS%202023.%20Mohon%20info%20selengkapnya%20..."
+                  className="btn-chatnowsupercamp"
+                >
+                  <strong>Chat Us Now!</strong>
+                </a>
+              </Card.Body>
+            </Card>
+
+            <Card style={{ border: "none" }} className="card-supercamp">
+              <Card.Img
+                variant="top"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/UNDIP-600x600.jpg"
+              />
+              <Card.Body className="card-edumatrix">
+                <Card.Title>
+                  <strong>Bimbel UMPTN UNDIP 2023</strong>
+                </Card.Title>
+                <br />
+                <a
+                  href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Bimbel%20UMPTN%20UNDIP%202023.%20Mohon%20info%20selengkapnya%20..."
+                  className="btn-chatnowsupercamp"
+                >
+                  <strong>Chat Us Now!</strong>
+                </a>
+              </Card.Body>
+            </Card>
+          </div>
+
+          {/* #3 */}
+          <div className="program-supercamp1">
+            <Card style={{ border: "none" }} className="card-supercamp">
+              <Card.Img
+                variant="top"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/UNBRAW-600x600.jpg"
+              />
+              <Card.Body className="card-edumatrix">
+                <Card.Title>
+                  <strong>Bimbel UMPTN UNBRAW 2023</strong>
+                </Card.Title>
+                <br />
+                <a
+                  href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Bimbel%20UMPTN%20UNBRAW%202023.%20Mohon%20info%20selengkapnya%20..."
+                  className="btn-chatnowsupercamp"
+                >
+                  <strong>Chat Us Now!</strong>
+                </a>
+              </Card.Body>
+            </Card>
+
+            <Card style={{ border: "none" }} className="card-supercamp">
+              <Card.Img
+                variant="top"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/UNAIR-600x600.jpg"
+              />
+              <Card.Body className="card-edumatrix">
+                <Card.Title>
+                  <strong>Bimbel UMPTN UNAIR 2023</strong>
+                </Card.Title>
+                <br />
+                <a
+                  href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20daftar%20Bimbel%20UMPTN%20UNAIR%202023.%20Mohon%20info%20selengkapnya%20..."
+                  className="btn-chatnowsupercamp"
+                >
+                  <strong>Chat Us Now!</strong>
+                </a>
+              </Card.Body>
+            </Card>
+
+            <Card style={{ border: "none" }} className="card-supercamp">
+              <Card.Img
+                variant="top"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/ITS-600x600.jpg"
+              />
+              <Card.Body className="card-edumatrix">
+                <Card.Title>
+                  <strong>Bimbel UMPTN ITS 2023</strong>
+                </Card.Title>
+                <br />
+                <a
+                  href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Bimbel%20UMPTN%20ITS%202023.%20Mohon%20info%20selengkapnya%20..."
+                  className="btn-chatnowsupercamp"
+                >
+                  <strong>Chat Us Now!</strong>
+                </a>
+              </Card.Body>
+            </Card>
+
+            <Card style={{ border: "none" }} className="card-supercamp">
+              <Card.Img
+                variant="top"
+                src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/USU-600x600.jpg"
+              />
+              <Card.Body className="card-edumatrix">
+                <Card.Title>
+                  <strong>Bimbel UMPTN USU 2023</strong>
+                </Card.Title>
+                <br />
+                <a
+                  href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20daftar%20Bimbel%20UMPTN%20USU%202023.%20Mohon%20info%20selengkapnya%20..."
                   className="btn-chatnowsupercamp"
                 >
                   <strong>Chat Us Now!</strong>
@@ -796,4 +986,4 @@ const Kedokteran = () => {
   );
 };
 
-export default Kedokteran;
+export default Umptn;

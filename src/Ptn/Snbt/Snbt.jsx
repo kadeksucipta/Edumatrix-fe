@@ -3,7 +3,9 @@ import "./Snbt.css";
 import Header from "../../Component/Header/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faArrowsTurnRight,
   faCheck,
+  faCircle,
   faFile,
   faPaperclip,
   faPhone,
@@ -17,6 +19,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import AnimatedPage from "../../Component/Animate/Animate";
+import swal from "sweetalert";
 
 const Snbt = () => {
   const goToPendaftaran = () => {
@@ -27,9 +30,11 @@ const Snbt = () => {
   const navigate = useNavigate();
 
   const [snbt, setSnbt] = useState([]);
+  const [fasilitas, setFasilitas] = useState([]);
 
   useEffect(() => {
     fetchSnbt();
+    fetchFasilitas()
   }, []);
 
   const fetchSnbt = () => {
@@ -40,6 +45,48 @@ const Snbt = () => {
         // console.log(data);
       });
   };
+
+  const fetchFasilitas = () => {
+    fetch(`https://odd-puce-panther-tie.cyclic.app/api/fasilitas`)
+      .then((res) => res.json())
+      .then((data) => {
+        setFasilitas(data.data);
+        // console.log(data);
+      });
+  };
+
+  const ourMission = () => {
+    swal({
+      title: "Our Mission",
+      text: "Menjadi lembaga bimbingan belajar Masuk Perguruan Tinggi Negeri yang terpercaya, terbaik, dan terdepan di Indonesia.",
+      button: "OK",
+    });
+  };
+
+  const ourPhilosophy = () => {
+    swal({
+      title: "Our Philosophy",
+      text: "Kesuksesan itu BERPOLA, kita harus menerapkan POLA Sukses Masuk PTN yang telah teruji dan terbukti. Dengan success rate 90%, didukung tim pengajar yang berkompeten dan berpengalaman, kami siap membantumu meraih masa depan cerah..",
+      button: "OK",
+    });
+  };
+
+  const ourPromise = () => {
+    swal({
+      title: "Our Promise",
+      text: "Kami akan membuat sistem belajar yang personal, sistematis, terstruktur, holistik, dan dipetakan berdasarkan target PTN Anda. Target Program EDUMATRIX Indonesia adalah kesuksesan Anda dalam meraih Jurusan dan PTN yang diinginkan.",
+      button: "OK",
+    });
+  };
+
+  const ourValues = () => {
+    swal({
+      title: "Our Promise",
+      text: "Kami selalu menginternalisasikan value-value berikut dalam perusahaan : - Integrity - Expert - Professional",
+      button: "OK",
+    });
+  };
+
   return (
     <React.Fragment>
       <AnimatedPage>
@@ -52,7 +99,7 @@ const Snbt = () => {
             alt=""
           />
           <h1 className="title-kedokteran">
-            <strong>Bimbel UTBK SNBT</strong>
+            {/* <strong>Bimbel UTBK SNBT</strong> */}
           </h1>
         </div>
 
@@ -425,9 +472,7 @@ const Snbt = () => {
           </Container>
         </div>
 
-        <br />
-
-        <div className="box-mainedu">
+        <div className="box-mainsnbt">
           <img
             className="img-main"
             src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Cover-Atas-4-2.jpg"
@@ -435,15 +480,13 @@ const Snbt = () => {
           />
           <div className="overlay-text">
             <h1>
-              <strong className="title-main">
-                Bimbel Masuk Kedokteran, PTN, & Kedinasan 2023
-              </strong>
+              <strong className="title-main">Bimbel UTBK SNBT</strong>
             </h1>
 
             <h5 className="desk-main">
-              Bimbel Persiapan UTBK SNBT / SBMPTN, Simak UI, UTUL UGM, UM Undip,
-              dan Ujian Mandiri PTN. Edumatrix Indonesia - Bimbel Sukses Masuk
-              FK, PTN, & Kedinasan Terbaik.
+              Bimbel Persiapan untuk siswa yang ingin mengikuti UTBK SNBT.
+              Dengan proses pembelajaran yang intesif dan tingkat kelulusan yang
+              tinggi.
             </h5>
 
             <div className="btn-konsul">
@@ -456,6 +499,55 @@ const Snbt = () => {
                 </a>
               </button>
             </div>
+          </div>
+        </div>
+
+        <div className="title-our">
+          <Container>
+            <h4>
+              Supercamp EDUMATRIX - Bimbel Spesialis Masuk UI ITB UGM & PTN
+              Favorit
+            </h4>
+            <p>
+              <strong>Supercamp EDUMATRIX</strong> adalah program bimbingan
+              belajar dengan <strong>sistem karantina</strong>. Kami hadir
+              sebagai partner terbaik bagi siswa untuk menyediakan program
+              bimbingan masuk UI, ITB, UGM, IPB, Unair, ITS, Undip, Unpad, &
+              Perguruan Tinggi Negeri Favorit.
+              <br />
+              <br />
+              <strong>Supercamp EDUMATRIX</strong>
+              diselenggarakan oleh Alumni Universitas Indonesia yang merupakan
+              praktisi bimbel dengan ribuan siswa di Jabodetabek dan berbagai
+              kota besar Indonesia. Kami hadir sebagai solusi untuk kebutuhan
+              bimbingan belajar yang fokus untuk menghadapi{" "}
+              <strong> UTBK SNBT/SBMPTN</strong> dan Ujian Mandiri seperti{" "}
+              <strong>Simak UI, UTUL UGM, UTM IPB, SMUP Unpad</strong> dan
+              lainnya.
+              <br />
+              <br />
+              Sistem <strong>bimbel konvensional</strong> dan les privat masih{" "}
+              <strong>perlu disempurnakan dengan sistem karantina</strong> yang
+              membuat siswa jadi lebih fokus dalam menghadapi tes masuk PTN.
+              Dengan sistem belajar yang teruji dan terbukti serta didukung oleh
+              pengajar yang berpengalaman dan berkompeten, kami siap menjadi
+              sahabat siswa dan partner terbaik orang tua untuk membantu meraih
+              PTN yang diinginkan.
+            </p>
+          </Container>
+          <div className="btn-umptnkin">
+            <button className="btn-alert" onClick={() => ourMission()}>
+              Our Mission
+            </button>
+            <button className="btn-alert" onClick={() => ourPhilosophy()}>
+              Our Philosophy
+            </button>
+            <button className="btn-alert" onClick={() => ourPromise()}>
+              Our Promise
+            </button>
+            <button className="btn-alert" onClick={() => ourValues()}>
+              Our Values
+            </button>
           </div>
         </div>
 
@@ -545,6 +637,386 @@ const Snbt = () => {
             </Card>
           </div>
         </div>
+
+        <Container>
+          <div className="program-pembelajaran">
+            <h2>
+              <strong>Program Pembelajaran</strong>
+            </h2>
+            <br />
+            <h5>
+              <strong>Privat Akademik Offline & Online</strong>
+            </h5>
+            <br />
+            <p>
+              <strong>Edumatrix Indonesia</strong> menyediakan program
+              pembelajaran secara offline & online yang bisa dipilih sesuai
+              kebutuhan siswa. Seperti private akademik online yang memungkinkan
+              proses pembelajaran bisa dilakukan jarak jauh. Selain akan lebih
+              efektif waktu, program privat belajar online ini juga memiliki
+              keuntungan lainnya.
+              <br />
+              <br />
+              Seperti proses pembelajaran akan berjalan sangat intensif karena
+              menggunakan sistem one on one. Artinya satu guru untuk siswa.
+              Dengan pendekatan ini, maka proses pembelajaran akan terjadi
+              secara lebih baik dan menguntungkan bagi peserta.
+              <br />
+              <br />
+              Ditambah setiap peserta yang mengikuti akan mendapatkan modul
+              pelajaran, e-book materi hingga rekaman proses pembelajaran. Hal
+              itu bisa dimanfaatkan untuk mengulang materi pembelajaran secara
+              mandiri untuk hasil yang lebih maksimal.
+              <br />
+              <br />
+              Sedangkan untuk private belajar ini juga bisa dilakukan offline
+              untuk mempertemukan guru dan siswa di tempat yang sama.
+            </p>
+          </div>
+        </Container>
+
+        <div className="pro-teacher">
+          <img
+            className="img-proteacher"
+            src="https://edumatrix-indonesia.com/wp-content/uploads/2022/12/Group-561.jpg"
+            alt=""
+          />
+        </div>
+
+        <Container>
+          <div className="univ">
+            <img
+              className="univ"
+              src="https://edumatrix-indonesia.com/wp-content/uploads/2022/12/Group-560.png"
+              alt=""
+            />
+          </div>
+        </Container>
+
+        <Container>
+          <div className="box-story">
+            <h3>Success Stories...</h3>
+            <p>
+              Tim kami telah membantu siswa diterima di berbagai jurusan
+              berikut:
+            </p>
+            <div className="bagi-success">
+              <div className="column-success">
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Akuntansi Undip Internasional
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Farmasi ITB Internasional
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Teknik Sipil ITS Internasional
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Teknik Kimia ITS Internasional
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FK UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FK UGM
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FKG UGM
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FKH UGM
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FKG UB
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FK UNDIP
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FKG UNAIR
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FK UNPAD
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FKG UNPAD
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FK UNSOED
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Hukum UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FK UNSYIAH
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FK UIN Jakarta
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FKH Udayana
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FK UNHAS
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FK UNSRI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FK UNLAM
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FK UNAND
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FK Universitas Palangkaraya
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Psikologi UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Akuntansi UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Gizi UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Teknik Metalurgi UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Ekonomi UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Teknik Industri UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  STEI ITB
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  FTTM ITB
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  SBM ITB
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Arsitektur ITB
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Teknik Industri dan Pertanian IPB
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Biokimia IPB
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Managemen UB
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Statistik UB
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Hukum UB
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Teknik Informatika UNDIP
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Hukum UNDIP
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Akuntansi UNAIR
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Psikologi UNPAD
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Teknik Elektro ITS
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Teknik Perkapalan ITS
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Informatika ITS
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Informatika UPN Veteran Jakarta
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Teknik Industri UNS
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Hukum USU
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  PGSD UNJ
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Ilmu Ekonomi UGM
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Akuntansi UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Ilmu Ekonomi UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Komunikasi UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Arsitektur UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Arsitektur Unair
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Teknik Industri UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Hukum UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Psikologi UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Fasilkom UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Matematika UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Biologi UI
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Akuntansi UGM
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Teknik Geofisika ITB
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Tek Geofisika ITS
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Tek Perkapalan ITS
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  Teknik Geologi UNDIP
+                </h6>
+                <h6 className="item-success">
+                  <FontAwesomeIcon className="icon-success" icon={faCircle} />{" "}
+                  dan PTN Terbaik lainnya
+                </h6>
+              </div>
+            </div>
+          </div>
+        </Container>
+
+        <Container>
+          <div className="img-alumni">
+            <img
+              className="img-itemalumni"
+              src="https://edumatrix-indonesia.com/wp-content/uploads/2022/12/siswa-bimbel-snbt.jpg"
+              alt=""
+            />
+            <img
+              className="img-itemalumni"
+              src="https://edumatrix-indonesia.com/wp-content/uploads/2022/12/siswa-bimbel-snbt-2.jpg"
+              alt=""
+            />
+            <img
+              className="img-itemalumni"
+              src="https://edumatrix-indonesia.com/wp-content/uploads/2022/12/siswa-bimbel-snbt-3.jpg"
+              alt=""
+            />
+            <img
+              className="img-itemalumni"
+              src="https://edumatrix-indonesia.com/wp-content/uploads/2022/12/siswa-bimbel-snbt-4.jpg"
+              alt=""
+            />
+          </div>
+        </Container>
+
+        <Container>
+          <div className="fasilitas-program">
+            <h3>Fasilitas Program</h3>
+            {fasilitas.map((item, index) => (
+              <div key={index}>
+                <p>
+                  <FontAwesomeIcon
+                    className="icon-fasilitas"
+                    icon={faArrowsTurnRight}
+                  />{" "}
+                  {item.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+
         <div className="mulai-daftar">
           <div className="isi-supercamp">
             <h1>
