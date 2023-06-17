@@ -7,26 +7,50 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faLocationDot,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const goToContactKami = () => {
+    navigate("/ContactKami");
+  };
+  const goToTentangKami = () => {
+    navigate("/TentangKami");
+  };
+  const goToHome = () => {
+    navigate("/Home");
+  };
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   return (
     <div>
       <footer className="footer-distributed">
         <div className="footer-left">
-          <img style={{width: "200px"}} className="logo-footer" src="https://bimbelsnbt.com/wp-content/uploads/2022/12/logo-header.png" />
+          <img
+            style={{ width: "200px" }}
+            className="logo-footer"
+            src="https://bimbelsnbt.com/wp-content/uploads/2022/12/logo-header.png"
+          />
           <h3>
             <br />
             Tentang<span>Kami</span>
           </h3>
 
           <p className="footer-links">
-            <a href="#">Home</a> | <a href="#">Blog</a> | <a href="#">About</a>{" "}
-            | <a href="#">Contact</a>
+            <a onClick={() => goToHome()}>Home</a> |{" "}
+            <a onClick={() => goToTentangKami()}>About</a> |{" "}
+            <a onClick={() => goToContactKami()}>Contact</a>
           </p>
 
           <p className="footer-company-name">
-          © All rights reserved. • Edumatrix Indonesia
+            © All rights reserved. • Edumatrix Indonesia
           </p>
         </div>
 
@@ -41,14 +65,16 @@ const Footer = () => {
           <br />
           <div>
             <FontAwesomeIcon style={{ color: "white" }} icon={faPhone} />{" "}
-            <p>+62 81-215523902</p>
+            <p>
+              <a style={{ color: "white" }} href="tel:+6281215523902">
+                +62 81-215523902
+              </a>
+            </p>
           </div>
           <div>
             <FontAwesomeIcon style={{ color: "white" }} icon={faEnvelope} />{" "}
             <p>
-              <a href="https://edumatrix-indonesia.com/">
-                edumatrix-indonesia.com
-              </a>
+              <a href="mailto:edumatrix.id@gmail.com">edumatrix.id@gmail.com</a>
             </p>
           </div>
         </div>

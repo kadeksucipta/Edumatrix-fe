@@ -215,6 +215,9 @@
   .card-landing {
     width: 20rem;
   }
+  .promo-edumatrix {
+    padding: 18px;
+  }
 }
 @media only screen and (max-width: 550px) {
   .img-landing {

@@ -92,15 +92,12 @@ const Snbt = () => {
       <AnimatedPage>
         <Header />
 
-        <div className="box-kedokteran">
-          <img
-            className="img-kedokteran"
-            src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Cover-Tengah-6-800x450.jpg"
-            alt=""
-          />
-          <h1 className="title-kedokteran">
-            {/* <strong>Bimbel UTBK SNBT</strong> */}
-          </h1>
+        <div className="box-snbt">
+          <Container>
+            <div className="content-landing">
+                <strong className="judul-kedokteran">Bimbel SNBT</strong>
+            </div>
+          </Container>
         </div>
 
         <div className="text-center mt-5">
@@ -494,8 +491,8 @@ const Snbt = () => {
                 <a href="tel:085600422188">Konsultasi Gratis</a>
               </button>
               <button className="proposal">
-                <a href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20tahu%20mengenai%20Program%20Edumatrix%2C%20Bimbel%20Persiapan%20Masuk%20Kedokteran.%20Bagaimana%20penjelasan%20detail%20programnya%3F">
-                  Request Proposal
+                <a href="https://web.whatsapp.com/send?phone=6281215523902&text=Halo%20Kak%20Eka,%20saya%20ingin%20tahu%20mengenai%20Program%20Edumatrix%2C%20Les%20Privat%20UTBK%20SNBT.%20Bagaimana%20penjelasan%20detail%20programnya%3F">
+                  Tanya Program
                 </a>
               </button>
             </div>

@@ -34,6 +34,7 @@ import Snbt from './Ptn/Snbt/Snbt';
 import Gapyear from './Ptn/Gapyear/Gapyear';
 import Umptn from './Ptn/Umptn/Umptn';
 import Umptnkin from './Ptn/Umptnkin/Umptnkin';
+import Akmil from './TarunaEdu/Akmil/Akmil';
 
 const router = createBrowserRouter([
   {
@@ -147,6 +148,10 @@ const router = createBrowserRouter([
   {
     path: "Umptnkin",
     element: <Umptnkin/>
+  },
+  {
+    path: "Akmil",
+    element: <Akmil/>
   },
 ])
 

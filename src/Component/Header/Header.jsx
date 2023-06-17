@@ -89,6 +89,9 @@ const Header = () => {
   const goToUmptnkin = () => {
     navigate("/Umptnkin");
   };
+  const goToAkmil = () => {
+    navigate("/Akmil");
+  };
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -158,7 +161,7 @@ const Header = () => {
                     title="Taruna Edumatrix"
                     id="basic-nav-dropdown"
                   >
-                    <NavDropdown.Item onClick={() => goToProfileTutor()}>
+                    <NavDropdown.Item onClick={() => goToAkmil()}>
                       Bimbel AKMIL
                     </NavDropdown.Item>
                     <NavDropdown.Item onClick={() => goToContactKami()}>
@@ -212,7 +215,7 @@ const Header = () => {
                     BIMBEL UMPTN
                   </NavDropdown.Item>
                   <NavDropdown.Item onClick={() => goToUmptnkin()}>
-                    BIMBEL UMPTNKIN
+                    BIMBEL UMPTKIN
                   </NavDropdown.Item>
                 </NavDropdown>
                 <Button

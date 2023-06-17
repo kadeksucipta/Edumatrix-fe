@@ -95,15 +95,12 @@ const Umptnkin = () => {
       <AnimatedPage>
         <Header />
 
-        <div className="box-kedokteran">
-          <img
-            className="img-kedokteran"
-            src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/Cover-tengah-1-800x450.jpg"
-            alt=""
-          />
-          <h1 className="title-kedokteran">
-            {/* <strong>Bimbel UMPTKIN</strong> */}
-          </h1>
+        <div className="box-umptnkin">
+          <Container>
+            <div className="content-landing">
+              <strong className="judul-kedokteran">Bimbel UMPTNKIN</strong>
+            </div>
+          </Container>
         </div>
 
         <div className="box-dokprio">
@@ -140,7 +137,8 @@ const Umptnkin = () => {
           <Card className="card-priodok">
             <Card.Title className="header-priority">
               <strong>
-                Supercamp Edumatrix Indonesia Priority Sukses UMPTN 2023
+                Training Camp Taruna Edumatrix Indonesia Priority Sukses Lolos
+                UMPTKIN 2023
               </strong>
             </Card.Title>
             <Card.Body>
@@ -272,8 +270,8 @@ const Umptnkin = () => {
                 <a href="tel:085600422188">Konsultasi Gratis</a>
               </button>
               <button className="proposal">
-                <a href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20tahu%20mengenai%20Program%20Edumatrix%2C%20Bimbel%20Persiapan%20Masuk%20Kedokteran.%20Bagaimana%20penjelasan%20detail%20programnya%3F">
-                  Request Proposal
+                <a href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Aulia,%20saya%20ingin%20tahu%20mengenai%20Program%20Edumatrix%2C%20Bimbel%20UMPTKIN.%20Bagaimana%20penjelasan%20detail%20programnya%3F">
+                  Tanya Program
                 </a>
               </button>
             </div>

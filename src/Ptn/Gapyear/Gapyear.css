@@ -1,3 +1,17 @@
+.box-gapyear1 {
+  background: radial-gradient(
+      circle at top right,
+      rgba(66, 66, 66, 0.446),
+      rgba(53, 53, 53, 0.532)
+    ),
+    url(https://edumatrix-indonesia.com/wp-content/uploads/2023/03/1-2-1-1200x676.jpg);
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .subtitle-gapyear {
   text-align: center;
   color: rgb(1, 120, 232);

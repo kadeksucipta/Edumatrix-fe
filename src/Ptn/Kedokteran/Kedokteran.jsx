@@ -47,7 +47,7 @@ const Kedokteran = () => {
   const ourPhilosophy = () => {
     swal({
       title: "Our Philosophy",
-      text: "Kesuksesan itu BERPOLA, kita harus menerapkan POLA Sukses Masuk PTN yang telah teruji dan terbukti. Dengan success rate 90%, didukung tim pengajar yang berkompeten dan berpengalaman, kami siap membantumu meraih masa depan cerah..",
+      text: "Kesuksesan itu BERPOLA, kita harus menerapkan POLA Sukses Masuk PTN yang telah teruji dan terbukti. Dengan success rate 90%, didukung tim pengajar yang berkompeten dan berpengalaman, kami siap membantumu meraih masa depan cerah.",
       button: "OK",
     });
   };
@@ -73,15 +73,18 @@ const Kedokteran = () => {
       <AnimatedPage>
         <Header />
 
-        <div className="box-kedokteran">
-          <img
-            className="img-kedokteran"
-            src="https://edumatrix-indonesia.com/wp-content/uploads/2023/03/image-asian-male-female-doctor_296537-5186.jpg"
-            alt=""
-          />
+        {/* <div className="box-kedokteran">
           <h1 className="title-kedokteran">
-            {/* <strong>Bimbel Masuk Kedokteran</strong> */}
+            <strong>Bimbel Masuk Kedokteran</strong>
           </h1>
+        </div> */}
+
+        <div className="box-kedokteran">
+          <Container>
+            <div className="content-landing">
+                <strong className="judul-kedokteran">Bimbel Masuk Kedokteran</strong>
+            </div>
+          </Container>
         </div>
 
         <div className="box-dokprio">

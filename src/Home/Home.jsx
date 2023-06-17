@@ -106,6 +106,9 @@ const Home = () => {
   const goToUmptnkin = () => {
     navigate("/Umptnkin");
   };
+  const goToAkmil = () => {
+    navigate("/Akmil");
+  };
 
   const [user, setUser] = useState({
     username: "",
@@ -233,23 +236,23 @@ const Home = () => {
                     </NavDropdown.Item>
 
                     <NavDropdown.Divider />
-                  <NavDropdown
-                    className="multi-dropdown"
-                    title="Taruna Edumatrix"
-                    id="basic-nav-dropdown"
-                  >
-                    <NavDropdown.Item onClick={() => goToProfileTutor()}>
-                      Bimbel AKMIL
-                    </NavDropdown.Item>
-                    <NavDropdown.Item onClick={() => goToContactKami()}>
-                      Bimbel AKPOL
-                    </NavDropdown.Item>
-                    <NavDropdown.Item onClick={() => goToTentangKami()}>
-                      Bimbel Sekolah Kedinasan
-                    </NavDropdown.Item>
+                    <NavDropdown
+                      className="multi-dropdown"
+                      title="Taruna Edumatrix"
+                      id="basic-nav-dropdown"
+                    >
+                      <NavDropdown.Item onClick={() => goToAkmil()}>
+                        Bimbel AKMIL
+                      </NavDropdown.Item>
+                      <NavDropdown.Item onClick={() => goToContactKami()}>
+                        Bimbel AKPOL
+                      </NavDropdown.Item>
+                      <NavDropdown.Item onClick={() => goToTentangKami()}>
+                        Bimbel Sekolah Kedinasan
+                      </NavDropdown.Item>
+                    </NavDropdown>
                   </NavDropdown>
-                  </NavDropdown>
-                  
+
                   <NavDropdown title="Privat" id="basic-nav-dropdown">
                     <NavDropdown.Item onClick={() => goToOnlineOffline()}>
                       Les Privat (Online/Offline)
@@ -292,7 +295,7 @@ const Home = () => {
                       BIMBEL UMPTN
                     </NavDropdown.Item>
                     <NavDropdown.Item onClick={() => goToUmptnkin()}>
-                      BIMBEL UMPTNKIN
+                      BIMBEL UMPTKIN
                     </NavDropdown.Item>
                   </NavDropdown>
                   <Button
@@ -503,11 +506,13 @@ const Home = () => {
               </div>
 
               <div className="area">
-                <h1 className="title-area">Semua Mata Pelajaran</h1>
+                <h1 className="title-area">
+                  Jangkauan Area Bimbel Edumatrix Indonesia
+                </h1>
                 <p className="desk-area">
-                  Bimbel Edumatrix Indonesia bersedia melayani program Bimbingan
-                  belajar masuk PTN bagi seluruh jenjang SMA/SMK sederajat dan
-                  seluruh mata pelajaran.
+                  Seiring banyaknya guru profesional di Executive Education,
+                  otomatis kami bersedia memperluas area pelayanan di daerah
+                  Jabodetabek dan sekelilingnya.
                 </p>
                 <ul className="column-area">
                   <li>
@@ -822,12 +827,12 @@ const Home = () => {
               </div>
 
               <div className="box-6">
-                <button className="btn-les1">Les Privat Offline</button>
-                <button className="btn-les2">Les Privat Calisatung</button>
-                <button className="btn-les3">Les Privat SBMPTN</button>
-                <button className="btn-les4">Les Privat Online</button>
-                <button className="btn-les5">Les Privat Olimpiade</button>
-                <button className="btn-les6">Les Privat CPNS</button>
+                <button className="btn-les1">Bimbel Masuk PTN</button>
+                <button className="btn-les2">Bimbel Kedokteran</button>
+                <button className="btn-les3">Bimbel UTBK/SNBT</button>
+                <button className="btn-les4">Bimbel UMPTN</button>
+                <button className="btn-les5">Taruna Edumatrix</button>
+                <button className="btn-les6">Bimbel UMPTKIN</button>
               </div>
             </div>
 

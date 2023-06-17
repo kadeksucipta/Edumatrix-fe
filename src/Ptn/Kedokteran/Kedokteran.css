@@ -1,8 +1,23 @@
 .box-kedokteran {
+  background: radial-gradient(
+      circle at top right,
+      rgba(66, 66, 66, 0.446),
+      rgba(53, 53, 53, 0.532)
+    ),
+    url(https://edumatrix-indonesia.com/wp-content/uploads/2023/03/image-asian-male-female-doctor_296537-5186.jpg);
   width: 100%;
-  background: black;
-  width: 100%;
-  height: auto;
+  height: 500px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.judul-kedokteran {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 50px;
 }
 .img-kedokteran {
   width: 100%;
@@ -11,13 +26,6 @@
   object-fit: cover;
   object-position: 50% 5%;
   max-width: 100%;
-}
-.title-kedokteran {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
 }
 .box-dokprio {
   background: rgba(251, 233, 221, 0.476);
@@ -56,25 +64,25 @@
   opacity: 50%;
 }
 .konsul {
-    background: rgb(1, 120, 232);
-    padding: 20px;
-    font-size: 20px;
-    font-weight: 500;
-    border-radius: 10px;
+  background: rgb(1, 120, 232);
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
 }
 .proposal {
-    background: orangered;
-    padding: 20px;
-    font-size: 20px;
-    margin-left: 10px;
-    font-weight: 500;
-    border-radius: 10px;
+  background: orangered;
+  padding: 20px;
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: 500;
+  border-radius: 10px;
 }
 .desk-main {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 .btn-konsul {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 /* RESPOSIVE */
@@ -95,6 +103,9 @@
     display: flex;
     justify-content: center;
   }
+  .judul-kedokteran {
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -114,5 +125,8 @@
   .proposal {
     padding: 5px;
     font-size: 10px;
+  }
+  .judul-kedokteran {
+    text-align: center;
   }
 }
